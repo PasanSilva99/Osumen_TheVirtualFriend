@@ -1,0 +1,200 @@
+﻿<Page x:Class="Osumen_TheVirtualFriend.Splash"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Osumen_TheVirtualFriend"
+      mc:Ignorable="d" 
+      d:DesignHeight="576" d:DesignWidth="1024"
+      Title="Splash">
+
+    <Grid x:Name="Parent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1024"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Background="Beige" x:Name="Child_Grid" Margin="0,0,0,-515" Height="567" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="1024" RenderTransformOrigin="0.512,0.61">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1019.896"></ColumnDefinition>
+                <ColumnDefinition Width="4.104"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="576"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image x:Name="s_back_img" HorizontalAlignment="Right" Width="1024" Source="fern-821293.jpg" RenderTransformOrigin="0.633,0.514" Margin="-1,-3,1,12" Grid.ColumnSpan="2" Height="567" VerticalAlignment="Bottom" Opacity="0.995" Stretch="Fill">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="fern-821293-mask.png" TileMode="FlipXY">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Image.OpacityMask>
+            </Image>
+
+            <Rectangle x:Name="angry" HorizontalAlignment="Left" Height="50" Margin="40,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.Fill>
+                    <ImageBrush/>
+                </Rectangle.Fill>
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="bored" Fill="#FFB241AD" HorizontalAlignment="Left" Height="50" Margin="116,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="confused" Fill="#FF24C751" HorizontalAlignment="Left" Height="50" Margin="190,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="cry" Fill="#FF717195" HorizontalAlignment="Left" Height="50" Margin="268,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="disgust" Fill="#FF54E69D" HorizontalAlignment="Left" Height="50" Margin="340,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="exited" Fill="#FF2C2CC1" HorizontalAlignment="Left" Height="50" Margin="413,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="mesh" Fill="#FF8E8EEA" HorizontalAlignment="Left" Height="50" Margin="491,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="sad" Fill="#FF4592B6" HorizontalAlignment="Left" Height="50" Margin="560,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="scared" Fill="#FFC92D51" HorizontalAlignment="Left" Height="50" Margin="627,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="shy" Fill="#FFB84533" HorizontalAlignment="Left" Height="50" Margin="697,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="sick" Fill="#FF25C951" HorizontalAlignment="Left" Height="50" Margin="824,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="sleepy" Fill="#FFCB8E37" HorizontalAlignment="Left" Height="50" Margin="759,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="smile" Fill="#FF1F8D2E" HorizontalAlignment="Left" Height="50" Margin="885,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="surprised" Fill="#FF4D1A4F" HorizontalAlignment="Left" Height="50" Margin="949,489,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.235,0.827">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.165"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label x:Name="lbl1" Content="Hello, Have a nice Day" HorizontalAlignment="Left" Margin="301,55,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontWeight="Bold" Background="#00000000" RenderTransformOrigin="1.441,0.471" FontSize="36"/>
+            <Label x:Name="lbl2" Content="Good Morning" HorizontalAlignment="Left" Margin="375,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.973,0.355" FontSize="36"/>
+            <Image x:Name="Simg2" HorizontalAlignment="Left" Height="125" Margin="449,238,0,0" VerticalAlignment="Top" Width="130"/>
+
+        </Grid>
+
+
+
+
+
+
+    </Grid>
+</Page>
