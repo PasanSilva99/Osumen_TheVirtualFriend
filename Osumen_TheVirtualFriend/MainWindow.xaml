@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="576" Width="1024">
     <Grid>
-        
+        <local:TextBoxWithPlaceHolder HorizontalAlignment="Left" Height="23" Margin="245,209,0,0" TextWrapping="Wrap" Text="TextBoxWithPlaceHolder" VerticalAlignment="Top" Width="417" PlaceHolderText="Test"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="31" Margin="766,255,0,0" VerticalAlignment="Top" Width="77"/>
+
     </Grid>
 </Window>

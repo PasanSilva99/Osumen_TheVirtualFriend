@@ -7,12 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SplashPage">
+    <Page.Resources>
+        
+    </Page.Resources>
+
 
     <Grid>
-        <Grid x:Name="Grid_ImageLoader">
-            <Image Source="">
-                
-            </Image>
-        </Grid>
+        <Grid x:Name="Grid_ImageLoader"/>
+        <Image HorizontalAlignment="Left" Height="88" Margin="84,332,0,0" VerticalAlignment="Top" Width="88"/>
     </Grid>
 </Page>
