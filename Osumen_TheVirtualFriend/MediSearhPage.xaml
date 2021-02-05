@@ -1,0 +1,31 @@
+﻿<Page x:Class="Osumen_TheVirtualFriend.MediSearhPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Osumen_TheVirtualFriend"
+      mc:Ignorable="d" 
+      d:DesignHeight="576" d:DesignWidth="1024"
+      Title="MediSearhPage">
+    <Page.Resources>
+
+    </Page.Resources>
+
+    <Grid Background="#FFFBFBFB" x:Name="maingrid">
+        <Grid Width="1" HorizontalAlignment="Left" x:Name="navgrid">
+
+        </Grid>
+        <Border Background="White" BorderBrush="Black" BorderThickness="0.1" CornerRadius="30,30,30,30" Margin="150,20,20,20" x:Name="resultgridborder">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="2" BlurRadius="30" Color="#EEE290"/>
+            </Border.Effect>
+            <Grid x:Name="searchresultgrid">
+                <Grid.Background>
+                    <SolidColorBrush Color="Chocolate" Opacity="0"/>
+                </Grid.Background>
+                <local:searchtextbox HorizontalAlignment="Left" Height="100" Margin="10,-20,0,0" VerticalAlignment="Top" Width="772" Loaded="searchtextbox_Loaded"/>
+            </Grid>
+        </Border>
+    </Grid>
+
+</Page>
