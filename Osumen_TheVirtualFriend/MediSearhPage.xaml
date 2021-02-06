@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Osumen_TheVirtualFriend"
+      xmlns:local="clr-namespace:Osumen_TheVirtualFriend" xmlns:svgc1="http://sharpvectors.codeplex.com/svgc/"
       mc:Ignorable="d" 
       d:DesignHeight="576" d:DesignWidth="1024"
       Title="MediSearhPage">
@@ -15,7 +15,7 @@
         <Grid Width="1" HorizontalAlignment="Left" x:Name="navgrid">
 
         </Grid>
-        <Border Background="White" BorderBrush="Black" BorderThickness="0.1" CornerRadius="30,30,30,30" Margin="150,20,20,20" x:Name="resultgridborder">
+        <Border Background="White" BorderBrush="Black" BorderThickness="0.1" CornerRadius="30,30,30,30" Margin="20,20,20,20" x:Name="resultgridborder">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="2" BlurRadius="30" Color="#EEE290"/>
             </Border.Effect>
@@ -23,21 +23,21 @@
                 <Grid.Background>
                     <SolidColorBrush Color="Chocolate" Opacity="0"/>
                 </Grid.Background>
-                <local:searchtextbox HorizontalAlignment="Left" Height="52" Margin="74,44,0,0" VerticalAlignment="Top" Width="700" Loaded="searchtextbox_Loaded"/>
 
-                <Border Background="White" BorderBrush="#fbfbfb" BorderThickness="2" CornerRadius="30,30,30,30" Margin="80,150,80,100" x:Name="Dailytipgrid">
+                <Border Background="White" BorderBrush="gray" BorderThickness="0.5" CornerRadius="30,30,30,30" Margin="80,150,80,100" x:Name="Dailytipgrid">
                     <Border.Effect>
-                        <DropShadowEffect  BlurRadius="15" Color="Gray"/>
+                        <DropShadowEffect  BlurRadius="5" Color="#eee290"/>
                     </Border.Effect>
-                    <Grid>
-
-
-                    </Grid>
                 </Border>
+                <local:searchtextbox Height="100" Margin="80,10,140,0" VerticalAlignment="Top" Width="Auto"/>
+
+
+                <UserControl xmlns:svgc="http://sharpvectors.codeplex.com/svgc" Margin="-15,0,0,0" />
+
             </Grid>
 
         </Border>
-        <local:appointmentbutton Height="180" Margin="788,408,20,-12" VerticalAlignment="Top" Width="Auto"/>
+        <local:appointmentbutton HorizontalAlignment="Left" Height="204" Margin="846,400,-30,-28" VerticalAlignment="Top" Width="208"/>
 
     </Grid>
 
