@@ -3,16 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Osumen_TheVirtualFriend"
-             mc:Ignorable="d" Width="200" Height="198.347">
-    <Border Background="#787878" CornerRadius="180,15,0,15" Width="150" Height="150" BorderBrush="Gray" BorderThickness="2" x:Name="buttonborderappt">
-        <Image Source="C:\Users\hdalp\Desktop\iprep\Osumen_TheVirtualFriend\Osumen_TheVirtualFriend\Searchasset\calendar.png" Margin="48,41,8,8">
-            <Image.Effect>
-                <DropShadowEffect BlurRadius="30" Color="Gray"></DropShadowEffect>
-            </Image.Effect></Image>
-        <Border.Effect>
-            <DropShadowEffect BlurRadius="20" Color="Gray"></DropShadowEffect>
-        </Border.Effect>
+             xmlns:local="clr-namespace:Osumen_TheVirtualFriend" xmlns:svgc1="http://sharpvectors.codeplex.com/svgc/"
+             mc:Ignorable="d" Width="150" Height="149.847">
+
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="buttonappt" Color="#787878"/>
+    </UserControl.Resources>
+    <Border Background="{StaticResource buttonappt}" CornerRadius="180,15,0,15" Width="150" Height="150" BorderBrush="Gray" BorderThickness="1" x:Name="buttonborderappt">
+        <UserControl xmlns:svgc="http://sharpvectors.codeplex.com/svgc" Margin="-15,0,0,0" >
+            <svgc1:SvgViewbox x:Name="NavBarBackImage" Source="Searchasset\calendar.svg" Margin="59,34,10,0">
+                <svgc1:SvgViewbox.Effect>
+                    <DropShadowEffect BlurRadius="15" Opacity="0.2" ShadowDepth="1"/>
+                </svgc1:SvgViewbox.Effect>
+            </svgc1:SvgViewbox>
+        </UserControl>
     </Border>
 
 </UserControl>

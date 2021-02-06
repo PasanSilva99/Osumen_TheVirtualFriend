@@ -7,7 +7,7 @@
              mc:Ignorable="d" Height="80.867" Width="664.905">
     <Border Background="#FFFBFBFB" CornerRadius="13" Height="26" Width="600" x:Name="searchtxtboxbrdr">
         <Border.Effect>
-            <DropShadowEffect BlurRadius="20" Color="Gray"></DropShadowEffect>
+            <DropShadowEffect BlurRadius="6" Color="LightGray"></DropShadowEffect>
         </Border.Effect>
         <Grid Margin="0,-25,0,0" >
 

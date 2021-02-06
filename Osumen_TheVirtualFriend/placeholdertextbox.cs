@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace Osumen_TheVirtualFriend
@@ -12,7 +7,8 @@ namespace Osumen_TheVirtualFriend
     {
         private string _placeholdertext = "Placeholder";
 
-        public string placeholdertext {
+        public string placeholdertext
+        {
             get
             {
                 return _placeholdertext;
@@ -22,8 +18,8 @@ namespace Osumen_TheVirtualFriend
                 _placeholdertext = value;
                 Applyplaceholder();
             }
-        } 
-        public SolidColorBrush TextColor { get; set; } = new SolidColorBrush(Color.FromArgb(0, 0, 0,0));
+        }
+        public SolidColorBrush TextColor { get; set; } = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
         public SolidColorBrush placeholdercolor { get; set; } = new SolidColorBrush(Color.FromArgb((byte)255, (byte)64, (byte)64, (byte)64));
         public placeholdertextbox()
         {
@@ -53,7 +49,7 @@ namespace Osumen_TheVirtualFriend
 
         private void removeplaceholder()
         {
-            if(this.Text == placeholdertext)
+            if (this.Text == placeholdertext)
             {
                 this.Text = "";
                 this.Foreground = TextColor;
@@ -64,7 +60,7 @@ namespace Osumen_TheVirtualFriend
         private void Applyplaceholder()
         {
             this.Text = placeholdertext;
-       
+
             this.Foreground = placeholdercolor;
 
         }
