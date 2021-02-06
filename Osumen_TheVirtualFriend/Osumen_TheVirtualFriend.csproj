@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="appointmentbutton.xaml.cs">
+      <DependentUpon>appointmentbutton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MediSearhPage.xaml.cs">
       <DependentUpon>MediSearhPage.xaml</DependentUpon>
     </Compile>
@@ -65,6 +68,10 @@
     <Compile Include="SplashPage.xaml.cs">
       <DependentUpon>SplashPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="appointmentbutton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,6 +127,8 @@
     <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Searchasset\calendar.png" />
+    <Content Include="Searchasset\calendar.svg" />
     <Content Include="Searchasset\magnifying-glass.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
