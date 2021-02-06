@@ -4,19 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Osumen_TheVirtualFriend"
-             mc:Ignorable="d" Height="80.867" Width="664.905">
-    <Border Background="#FFFBFBFB" CornerRadius="13" Height="26" Width="600" x:Name="searchtxtboxbrdr">
+             mc:Ignorable="d" Height="80.867" Width="664.905"
+             x:Name="schbar">
+    <Border Background="#FFFBFBFB" CornerRadius="13" Height="30" Width="650" x:Name="searchtxtboxbrdr">
         <Border.Effect>
             <DropShadowEffect BlurRadius="6" Color="LightGray"></DropShadowEffect>
         </Border.Effect>
         <Grid Margin="0,-25,0,0" >
 
-            <local:placeholdertextbox placeholdertext="Search your Medications" HorizontalAlignment="Left" Height="24" Margin="15,26,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.487,0.124" x:Name="searchtxtbox" BorderBrush="#fbfbfb" Background="#fbfbfb">
+            <local:placeholdertextbox placeholdertext="Search your Medications" HorizontalAlignment="Left" Height="24" Margin="15,28,0,3" TextWrapping="Wrap" VerticalAlignment="Center" Width="555" RenderTransformOrigin="0.487,0.124" x:Name="searchtxtbox" BorderBrush="#fbfbfb" Background="#fbfbfb">
 
             </local:placeholdertextbox>
 
 
-            <Button  HorizontalAlignment="Left" Margin="525,25,0,0" VerticalAlignment="Top" Width="75" x:Name="Searchbutton" Height="26" Background="#FF787878" Foreground="#fbfbfb" RenderTransformOrigin="1.237,0.508">
+            <Button  HorizontalAlignment="Left" Margin="575,25,0,0" VerticalAlignment="Top" Width="75" x:Name="Searchbutton" Height="30" Background="#FF787878" Foreground="#fbfbfb" RenderTransformOrigin="1.237,0.508">
                 <TextBlock><Bold>Search</Bold></TextBlock>
 
                 <Button.Resources>
@@ -30,4 +31,20 @@
 
         </Grid>
     </Border>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation
+                        Storyboard.TargetName="searchtxtboxbrdr"
+                        Storyboard.TargetProperty="Opacity"
+                        From="0.0" To="1.0" Duration="0:0:1"
+                        AutoReverse="False"                        
+                        >
+                        
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
 </UserControl>
