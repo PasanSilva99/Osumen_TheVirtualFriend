@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Osumen_TheVirtualFriend"
              mc:Ignorable="d" Height="80.867" Width="664.905">
-    <Border Background="#FFFBFBFB" CornerRadius="13" Height="25" Width="552" x:Name="searchtxtboxbrdr">
+    <Border Background="#FFFBFBFB" CornerRadius="13" Height="26" Width="600" x:Name="searchtxtboxbrdr">
         <Border.Effect>
             <DropShadowEffect BlurRadius="20" Color="Gray"></DropShadowEffect>
         </Border.Effect>
@@ -16,7 +16,7 @@
             </local:placeholdertextbox>
 
 
-            <Button  HorizontalAlignment="Left" Margin="477,25,0,0" VerticalAlignment="Top" Width="75" x:Name="Searchbutton" Height="25" Background="#FF787878" Foreground="#fbfbfb">
+            <Button  HorizontalAlignment="Left" Margin="525,25,0,0" VerticalAlignment="Top" Width="75" x:Name="Searchbutton" Height="26" Background="#FF787878" Foreground="#fbfbfb" RenderTransformOrigin="1.237,0.508">
                 <TextBlock><Bold>Search</Bold></TextBlock>
 
                 <Button.Resources>
