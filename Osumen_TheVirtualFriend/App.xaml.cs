@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using 
-
 namespace Osumen_TheVirtualFriend
 {
     /// <summary>

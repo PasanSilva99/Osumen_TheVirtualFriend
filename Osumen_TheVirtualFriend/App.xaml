@@ -6,5 +6,7 @@
     <Application.Resources>
         <SolidColorBrush x:Key="AppBackground_Light" Color="#FFFF"/>
         <SolidColorBrush x:Key="AppBackground_Dark" Color="#333333"/>
+        <SolidColorBrush x:Key="NavigationBack_Light" Color="#F0F0F0"/>
+        <SolidColorBrush x:Key="NavigationBack_Dark" Color="#333333"/>
     </Application.Resources>
 </Application>
