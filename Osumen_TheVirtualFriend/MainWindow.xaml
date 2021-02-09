@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="576" Width="1024">
     <Grid>
-        
+        <Frame x:Name="Frame_page">
+            
+        </Frame>
     </Grid>
 </Window>

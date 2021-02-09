@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Osumen_TheVirtualFriend"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="AppBackground_Light" Color="#FFFF"/>
+        <SolidColorBrush x:Key="AppBackground_Dark" Color="#333333"/>
     </Application.Resources>
 </Application>
