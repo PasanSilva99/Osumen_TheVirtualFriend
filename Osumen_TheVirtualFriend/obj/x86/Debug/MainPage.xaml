@@ -6,12 +6,25 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+    Background="{ThemeResource WindowBackground}">
 
     <Grid>
-        <Frame x:ConnectionId='2' x:Name="PageLoader">
-            
-        </Frame>
+        <Grid Width="150" HorizontalAlignment="Left" Margin="0,0,0,0">
+            <!--Remove the background after developing the Navigation Control-->
+            <Grid.Background>
+                <AcrylicBrush TintColor="#CC7C28BC"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid Margin="150,0,0,0">
+            <Frame x:ConnectionId='2' x:Name="PageLoader">
+                <!--Remove the Brush after completeing the pages-->
+                <Frame.Background>
+                    <AcrylicBrush TintColor="#CC472A00"/>
+                </Frame.Background>
+
+            </Frame>
+        </Grid>
     </Grid>
 </Page>
 

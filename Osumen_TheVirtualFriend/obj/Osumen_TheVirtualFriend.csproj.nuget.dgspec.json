@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[6.2.12, )"
             },
+            "Microsoft.Toolkit.Uwp.UI.Controls": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
             "Microsoft.UI.Xaml": {
               "target": "Package",
               "version": "[2.5.0, )"
