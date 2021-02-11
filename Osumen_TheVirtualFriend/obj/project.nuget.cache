@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pVIUMEHWQyjJtGyQz/ugHqR3qCbiTpLkf9X1imRJauiB6CzwckCLX6vgBzx7CzL+zvfMqMkwXRxgZ1Oe3Zb59A==",
+  "dgSpecHash": "R/QSmLsqKRrjwdpG8B6kKMY1dj9VsWWWMLP1xqWDsRRSXvKsMZgzkeXnCW46zblJDSXNTseVYFRExrefGmoL+A==",
   "success": true,
-  "projectFilePath": "D:\\pasan\\Documents\\GitHub\\Osumen_TheVirtualFriend\\Osumen_TheVirtualFriend\\Osumen_TheVirtualFriend\\Osumen_TheVirtualFriend.csproj",
+  "projectFilePath": "D:\\pasan\\Documents\\GitHub\\Osumen_TheVirtualFriend\\Osumen_TheVirtualFriend\\Osumen_TheVirtualFriend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pasan\\.nuget\\packages\\microsoft.data.sqlite\\5.0.3\\microsoft.data.sqlite.5.0.3.nupkg.sha512",
     "C:\\Users\\pasan\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.3\\microsoft.data.sqlite.core.5.0.3.nupkg.sha512",
@@ -10,6 +10,7 @@
     "C:\\Users\\pasan\\.nuget\\packages\\microsoft.net.uwpcoreruntimesdk\\2.2.12\\microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Users\\pasan\\.nuget\\packages\\microsoft.netcore.universalwindowsplatform\\6.2.12\\microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
+    "C:\\Users\\pasan\\.nuget\\packages\\microsoft.ui.xaml\\2.5.0\\microsoft.ui.xaml.2.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\pasan\\.nuget\\packages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.2.12\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
     "C:\\Users\\pasan\\.nuget\\packages\\runtime.win10-arm.microsoft.net.native.compiler\\2.2.10-rel-29722-00\\runtime.win10-arm.microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
