@@ -8,7 +8,58 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+<<<<<<< Updated upstream
     <Grid>
+=======
+    <Grid x:Name="backgrid">
+        <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black">
+            <Grid Width="1500" x:Name="shadowgrid">
+
+
+                <Rectangle Grid.Row="0" Fill="{StaticResource WindowBackground}" Margin="0,35,0,38" RadiusX="20" RadiusY="20" HorizontalAlignment="Center" Width="1429" RenderTransformOrigin="1.004,0.498"/>
+                <Grid Grid.Row="0" Grid.Column="0" x:Name="showgrid">
+
+                    <Grid>
+                        <control:DropShadowPanel  BlurRadius="50" ShadowOpacity="0.2" Color="Black" Margin="200,350,200,120">
+                            <Grid>
+                                <Rectangle Grid.Row="0" Fill="{StaticResource ControlBackground}" Margin="10,20,20,20" RadiusX="20" RadiusY="20" HorizontalAlignment="Left" Width="1056" />
+                                <Grid>
+
+                                </Grid>
+                            </Grid>
+                        </control:DropShadowPanel>
+
+                    </Grid>
+                    <Grid>
+                        <control:DropShadowPanel  BlurRadius="40" ShadowOpacity="0.2" Color="Black" Margin="215,150,230,720" CornerRadius="30">
+                            <Grid>
+                                <Rectangle Grid.Row="0" Fill="{StaticResource ControlBackground}" Margin="10,20,-11,20" RadiusX="30" RadiusY="30" />
+                                <Grid>
+                                    <TextBox FontSize="18" FontFamily="times new roman" Background="{StaticResource ControlBackground}" HorizontalAlignment="Left" Margin="26,0,0,0" Text="TextBox" TextWrapping="Wrap" Padding="0,20,0,0" VerticalAlignment="Center" Height="77" Width="846" BorderBrush="{StaticResource ControlBackground}"/>
+                                    <Button Content="Search" FontSize="30" FontFamily="times new roman" FontWeight="Bold" Margin="872,0,0,0" Height="77" Width="150" CornerRadius="0,20,20,0">
+
+                                    </Button>
+
+                                </Grid>
+                            </Grid>
+                        </control:DropShadowPanel>
+
+                    </Grid>
+
+
+
+                </Grid>
+                <Button Margin="1192,737,0,0" VerticalAlignment="Top" Background="DarkGray" CornerRadius="180,20,0,20" BorderBrush="Gray" Opacity="1" Width="308" Height="263">
+                    <StackPanel Height="180" VerticalAlignment="Center" HorizontalAlignment="Right" Width="196">
+                        <Image Source="Assets\calendar.png" Height="180" Width="212" RequestedTheme="Default"/>
+                    </StackPanel>
+                </Button>
+
+
+
+            </Grid>
+        </control:DropShadowPanel>
+>>>>>>> Stashed changes
 
     </Grid>
 </Page>
