@@ -26,6 +26,10 @@
                         FallbackColor="#FBFBFB"
                         />
 
+                    <SolidColorBrush
+                        x:Key="InputControlBack"
+                        Color="#FBFBFB"/>
+
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
                     <AcrylicBrush 
@@ -39,11 +43,16 @@
                     <AcrylicBrush 
                         x:Key="ControlBackground"
                         BackgroundSource="Backdrop"
-                        TintColor="#FBFBFB"
+                        TintColor="#333333"
                         TintOpacity="0.9"
                         TintLuminosityOpacity="0.8"
-                        FallbackColor="#FBFBFB"
+                        FallbackColor="#333333"
                         />
+                    
+                    <SolidColorBrush
+                        x:Key="InputControlBack"
+                        Color="#4B4B4B"/>
+                    
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
