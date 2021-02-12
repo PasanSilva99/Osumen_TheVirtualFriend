@@ -5,19 +5,11 @@
     xmlns:local="using:Osumen_TheVirtualFriend"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-<<<<<<< Updated upstream
-    <Grid x:Name="backgrid">
-        <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black">
-            <Grid Width="1500" x:Name="shadowgrid">
 
 
-                <Rectangle Grid.Row="0" Fill="{StaticResource ControlBackground}" Margin="0,35,0,38" RadiusX="20" RadiusY="20" HorizontalAlignment="Center" Width="1429" RenderTransformOrigin="1.004,0.498"/>
-                <Grid Grid.Row="0" Grid.Column="0" x:Name="showgrid">
-=======
 
     <Grid>
 
@@ -28,7 +20,7 @@
 
                     <Rectangle Grid.Row="0" Fill="{StaticResource WindowBackground}" Margin="0,0,0,38" RadiusX="20" RadiusY="20" HorizontalAlignment="Center" Width="1429" RenderTransformOrigin="1.004,0.498" Height="927" VerticalAlignment="Bottom"/>
                     <Grid Grid.Row="0" Grid.Column="0" x:Name="showgrid">
->>>>>>> Stashed changes
+
 
                         <Grid>
                             <control:DropShadowPanel  BlurRadius="50" ShadowOpacity="0.2" Color="Black" Margin="200,350,200,120">
@@ -53,18 +45,7 @@
                                 </Grid>
                             </control:DropShadowPanel>
 
-<<<<<<< Updated upstream
-                    </Grid>
-                    <Grid>
-                        <control:DropShadowPanel  BlurRadius="40" ShadowOpacity="0.1" Color="Black" Margin="215,150,230,720" CornerRadius="30">
-                            <Grid>
-                                <Rectangle Grid.Row="0" Fill="{StaticResource ControlBackground}" Margin="10,20,-11,20" RadiusX="30" RadiusY="30" />
-                                <Grid>
-                                    <TextBox FontSize="18" FontFamily="times new roman" Background="{StaticResource ControlBackground}" HorizontalAlignment="Left" Margin="26,0,0,0" Text="TextBox" TextWrapping="Wrap" Padding="0,20,0,0" VerticalAlignment="Center" Height="77" Width="846" BorderBrush="{StaticResource ControlBackground}"/>
-                                    <Button Content="Search" FontSize="30" FontFamily="times new roman" FontWeight="Bold" Margin="872,0,0,0" Height="77" Width="150" CornerRadius="0,20,20,0">
-=======
-                        </Grid>
->>>>>>> Stashed changes
+
 
 
 
@@ -78,21 +59,21 @@
 
 
                 </Grid>
-<<<<<<< Updated upstream
+
                 <Button Margin="1123,737,0,0" VerticalAlignment="Top" Height="263" Background="LightGray" Width="377" CornerRadius="180,20,0,20" BorderBrush="Gray" Opacity="1">
                     <StackPanel Height="158" VerticalAlignment="Top" HorizontalAlignment="Right" Width="223">
                         <Image Source="\Assets\calendar.png" Height="156" Width="221" RequestedTheme="Default"></Image>
+
                     </StackPanel>
                 </Button>
 
 
 
             </Grid>
-        </control:DropShadowPanel>
-=======
+
             </control:DropShadowPanel>
 
->>>>>>> Stashed changes
+
 
         </Grid>
     </Grid>
