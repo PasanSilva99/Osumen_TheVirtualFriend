@@ -1,10 +1,18 @@
+<<<<<<< Updated upstream
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows;
 
 // General Information about an assembly is controlled through the following
+=======
+﻿
+// General Information about an assembly is controlled through the following 
+>>>>>>> Stashed changes
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
+using System.Reflection;
+using System.Runtime.InteropServices;
+
 [assembly: AssemblyTitle("Osumen_TheVirtualFriend")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
