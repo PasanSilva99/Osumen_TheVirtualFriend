@@ -119,14 +119,23 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Appointmentpage.xaml.cs">
-      <DependentUpon>Appointmentpage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ChatControl.xaml.cs">
       <DependentUpon>ChatControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalBackWindow2Control.xaml.cs">
+      <DependentUpon>JournalBackWindow2Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalEntryControl.xaml.cs">
+      <DependentUpon>JournalEntryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalEntryViewerCustomControl.xaml.cs">
+      <DependentUpon>JournalEntryViewerCustomControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalPageControl.xaml.cs">
+      <DependentUpon>JournalPageControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -134,7 +143,35 @@
     <Compile Include="MediHelpPage.xaml.cs">
       <DependentUpon>MediHelpPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NavigationControl.xaml.cs">
+      <DependentUpon>NavigationControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReminderDatePicker.xaml.cs">
+      <DependentUpon>ReminderDatePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderDropdwn.xaml.cs">
+      <DependentUpon>ReminderDropdwn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderSec1.xaml.cs">
+      <DependentUpon>ReminderSec1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderSec1Usercntrl.xaml.cs">
+      <DependentUpon>ReminderSec1Usercntrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderSec2Textbox.xaml.cs">
+      <DependentUpon>ReminderSec2Textbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderUiMain.xaml.cs">
+      <DependentUpon>ReminderUiMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderUISec2.xaml.cs">
+      <DependentUpon>ReminderUISec2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="System\Windows\Media.cs" />
+    <Compile Include="TimePicker.xaml.cs">
+      <DependentUpon>TimePicker.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -142,12 +179,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Bell.png" />
     <Content Include="Assets\calendar.png" />
     <Content Include="Assets\calendarsvg.svg" />
-    <Content Include="Assets\camera.png" />
-    <Content Include="Assets\Doctor.png" />
-    <Content Include="Assets\magnifying-glass.png" />
-    <Content Include="Assets\send.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -162,7 +196,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Appointmentpage.xaml">
+    <Page Include="JournalBackWIindow1Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,11 +208,59 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="JournalBackWindow2Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="JournalEntryControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="JournalEntryViewerCustomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JournalPageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MediHelpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReminderDatePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReminderDropdwn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReminderSec1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReminderSec1Usercntrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReminderSec2Textbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReminderUiMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReminderUISec2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimePicker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
