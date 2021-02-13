@@ -10,15 +10,8 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
-        <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.1"  Color="Black">
-            <Grid>
-                <Rectangle Fill="{StaticResource ControlBackground}">
-                    
-                </Rectangle>
-            </Grid>
-            
-        </control:DropShadowPanel>
+    <Grid Background="{StaticResource ControlBackground}">
+        
 
     </Grid>
 </UserControl>
