@@ -13,19 +13,24 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Osumen_TheVirtualFriend
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class TasksSec2 : Page
     {
-        public MainPage()
+        public TasksSec2()
         {
             this.InitializeComponent();
-            PageLoader.Navigate(typeof(TasksUIMain));
+            TasksSec2TextBox TasksS2textbx = new TasksSec2TextBox();
+            TasksSec2txtbx.Children.Add(TasksS2textbx);
+            TasksDatePicker TasksS2DatePicker = new TasksDatePicker();
+            TasksSec2DatePicker.Children.Add(TasksS2DatePicker);
+            TasksTimePicker TasksS2TimePicker = new TasksTimePicker();
+            TasksSec2TimePicker.Children.Add(TasksS2TimePicker);
         }
     }
 }
