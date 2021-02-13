@@ -119,8 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="JournalBackWIindow1.xaml.cs">
-      <DependentUpon>JournalBackWIindow1.xaml</DependentUpon>
+    <Compile Include="JournalBackWIindow1Control.xaml.cs">
+      <DependentUpon>JournalBackWIindow1Control.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChatControl.xaml.cs">
       <DependentUpon>ChatControl.xaml</DependentUpon>
@@ -128,14 +128,14 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="JournalBackWindoww2.xaml.cs">
-      <DependentUpon>JournalBackWindoww2.xaml</DependentUpon>
+    <Compile Include="JournalBackWindow2Control.xaml.cs">
+      <DependentUpon>JournalBackWindow2Control.xaml</DependentUpon>
     </Compile>
-    <Compile Include="JournalEntry.xaml.cs">
-      <DependentUpon>JournalEntry.xaml</DependentUpon>
+    <Compile Include="JournalEntryControl.xaml.cs">
+      <DependentUpon>JournalEntryControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="JournalPage.xaml.cs">
-      <DependentUpon>JournalPage.xaml</DependentUpon>
+    <Compile Include="JournalPageControl.xaml.cs">
+      <DependentUpon>JournalPageControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -171,7 +171,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="JournalBackWIindow1.xaml">
+    <Page Include="JournalBackWIindow1Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,15 +183,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="JournalBackWindoww2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="JournalEntry.xaml">
+    <Page Include="JournalBackWindow2Control.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="JournalPage.xaml">
+    <Page Include="JournalEntryControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="JournalPageControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
