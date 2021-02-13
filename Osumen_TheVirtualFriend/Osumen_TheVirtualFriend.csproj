@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Appointmentpage.xaml.cs">
+      <DependentUpon>Appointmentpage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChatControl.xaml.cs">
       <DependentUpon>ChatControl.xaml</DependentUpon>
     </Compile>
@@ -141,14 +144,10 @@
   <ItemGroup>
     <Content Include="Assets\calendar.png" />
     <Content Include="Assets\calendarsvg.svg" />
-
     <Content Include="Assets\camera.png" />
     <Content Include="Assets\Doctor.png" />
     <Content Include="Assets\magnifying-glass.png" />
     <Content Include="Assets\send.png" />
-
- 
-
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -163,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Appointmentpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ChatControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
