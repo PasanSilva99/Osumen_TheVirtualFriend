@@ -17,9 +17,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Osumen_TheVirtualFriend
 {
-    public sealed partial class JournalBackWindoww2 : UserControl
+    public sealed partial class ReminderSec1BottomBar : UserControl
     {
-        public JournalBackWindoww2()
+        public ReminderSec1BottomBar()
         {
             this.InitializeComponent();
         }
