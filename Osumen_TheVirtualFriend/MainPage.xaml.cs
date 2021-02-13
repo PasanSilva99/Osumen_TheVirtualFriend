@@ -27,7 +27,7 @@ namespace Osumen_TheVirtualFriend
         {
             this.InitializeComponent();
 
-            PageLoader.Navigate(typeof(MedihelpPage));
+            PageLoader.Navigate(typeof(HomePage));
 
         }
     }
