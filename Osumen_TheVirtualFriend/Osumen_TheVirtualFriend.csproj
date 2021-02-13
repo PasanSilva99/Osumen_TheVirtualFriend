@@ -138,6 +138,13 @@
   <ItemGroup>
     <Content Include="Assets\calendar.png" />
     <Content Include="Assets\calendarsvg.svg" />
+<<<<<<< Updated upstream
+=======
+    <Content Include="Assets\camera.png" />
+    <Content Include="Assets\Doctor.png" />
+    <Content Include="Assets\magnifying-glass.png" />
+    <Content Include="Assets\send.png" />
+>>>>>>> Stashed changes
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

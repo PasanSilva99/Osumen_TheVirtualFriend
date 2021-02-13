@@ -15,6 +15,21 @@
             <ColumnDefinition Width="*"/>
             
         </Grid.ColumnDefinitions>
+<<<<<<< Updated upstream
+=======
+        <local:ChatControl Grid.Column="0" Margin="0,0,0,10"/>
+        <ScrollViewer Grid.Column="1" Margin="0, 5, 10, 10">
+            <controls:WrapPanel>
+                <Rectangle Fill="BlueViolet" Width="400" Height="400" Margin="5"/>
+                <Rectangle Fill="#283722" Width="400" Height="400" Margin="5"/>
+                <Rectangle Fill="DarkCyan" Width="400" Height="400" Margin="5"/>
+                <Rectangle Fill="DarkTurquoise" Width="400" Height="400" Margin="5"/>
+                <Rectangle Fill="DimGray" Width="400" Height="400" Margin="5"/>
+
+            </controls:WrapPanel>
+
+        </ScrollViewer>
+>>>>>>> Stashed changes
 
         <controls:DropShadowPanel BlurRadius="50.0" ShadowOpacity="0.2" Color="Black">
             <Grid CornerRadius="10">
