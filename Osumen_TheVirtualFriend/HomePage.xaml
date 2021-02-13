@@ -13,24 +13,24 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="400"/>
             <ColumnDefinition Width="*"/>
-            
+
         </Grid.ColumnDefinitions>
 
-        <controls:DropShadowPanel BlurRadius="50.0" ShadowOpacity="0.2" Color="Black">
-            <Grid CornerRadius="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Rectangle Grid.Row="0" Grid.Column="0" Width="380" Fill="{StaticResource ControlBackground}" Margin="10" RadiusX="20" RadiusY="20"/>
+        <local:ChatControl Grid.Column="0" Margin="0,0,0,10"/>
+        <ScrollViewer Grid.Column="1" Margin="0, 5, 10, 10">
+            <controls:WrapPanel>
+                <Rectangle Fill="BlueViolet" Width="400" Height="400" Margin="5"/>
+                <Rectangle Fill="#283722" Width="400" Height="400" Margin="5"/>
 
-                <Grid Grid.Row="0" Grid.Column="0">
-                    
-                </Grid>
-            </Grid>
-        </controls:DropShadowPanel>
-        
+                <Rectangle Fill="DarkCyan" Width="400" Height="400" Margin="5"/>
+                <Rectangle Fill="DarkTurquoise" Width="400" Height="400" Margin="5"/>
+                <Rectangle Fill="DimGray" Width="400" Height="400" Margin="5"/>
+
+            </controls:WrapPanel>
+
+        </ScrollViewer>
+
+
+
     </Grid>
 </Page>

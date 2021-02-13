@@ -4,62 +4,80 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Osumen_TheVirtualFriend"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-<<<<<<< Updated upstream
-    <Grid>
-=======
+
+
+
     <Grid x:Name="backgrid">
-        <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black">
-            <Grid Width="1500" x:Name="shadowgrid">
+        <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
+            <Grid x:Name="shadowgrid" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
 
-                <Rectangle Grid.Row="0" Fill="{StaticResource WindowBackground}" Margin="0,35,0,38" RadiusX="20" RadiusY="20" HorizontalAlignment="Center" Width="1429" RenderTransformOrigin="1.004,0.498"/>
-                <Grid Grid.Row="0" Grid.Column="0" x:Name="showgrid">
+                <Rectangle Fill="{StaticResource ControlBackground}" Margin="20,20,20,20" RadiusX="20" RadiusY="20" />
 
-                    <Grid>
-                        <control:DropShadowPanel  BlurRadius="50" ShadowOpacity="0.2" Color="Black" Margin="200,350,200,120">
-                            <Grid>
-                                <Rectangle Grid.Row="0" Fill="{StaticResource ControlBackground}" Margin="10,20,20,20" RadiusX="20" RadiusY="20" HorizontalAlignment="Left" Width="1056" />
-                                <Grid>
+                <Grid Grid.Column="0" Margin="40,40,40,40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-                                </Grid>
-                            </Grid>
-                        </control:DropShadowPanel>
+                    <control:DropShadowPanel Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" BlurRadius="50" ShadowOpacity="0.2" Color="#111111" HorizontalContentAlignment="Stretch" CornerRadius="10,10,10,10">
+                        <Rectangle x:Name="rect_Searchbar" Fill="{StaticResource InputControlBack}" RadiusX="16" RadiusY="16" Height="32" VerticalAlignment="Top" />
+                    </control:DropShadowPanel>
 
+                    <TextBox Style="{StaticResource SearchBoxStyle}" Grid.Row="0" Grid.Column="0" BorderBrush="Transparent" BorderThickness="2" PlaceholderText="Search For Symptoms..." Height="32" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" CornerRadius="16,0,0,16" Margin="0,0,-15,0"/>
+                    <Button Background="Gray" Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="16,16,16,16">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Assets/magnifying-glass.png"/>
+                            <TextBlock Text="Search" Margin="10,0,0,0" Foreground="{StaticResource DarkButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Frame x:Name="SearchLoader" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20,0,20"/>
+
+                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="grid_tip" Margin="0,50,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="36"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" x:Name="image_Osumen" Source="/Assets/Doctor.png"/>
+                        <TextBlock Grid.Row="1" Text="Daily Tip" HorizontalAlignment="Center" FontSize="34"/>
+                        <TextBlock Grid.Row="2" Text="Eat With Purpose" HorizontalAlignment="Center" FontSize="18"/>
+                        <TextBlock Grid.Row="3" Text="Everything you consume should have substantial nutritional value. 'You want the most nutritional bang for your buck,' says Dan Trink, C.S.C.S., a strength coach and trainer. 'Everything you eat should serve some sort of nutriional purpose in your body, fuel your worouts, and (be) geared toward optimizing your body.'" TextWrapping="Wrap" Padding="50, 0, 50, 0" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" TextAlignment="Center"/>
                     </Grid>
-                    <Grid>
-                        <control:DropShadowPanel  BlurRadius="40" ShadowOpacity="0.2" Color="Black" Margin="215,150,230,720" CornerRadius="30">
-                            <Grid>
-                                <Rectangle Grid.Row="0" Fill="{StaticResource ControlBackground}" Margin="10,20,-11,20" RadiusX="30" RadiusY="30" />
-                                <Grid>
-                                    <TextBox FontSize="18" FontFamily="times new roman" Background="{StaticResource ControlBackground}" HorizontalAlignment="Left" Margin="26,0,0,0" Text="TextBox" TextWrapping="Wrap" Padding="0,20,0,0" VerticalAlignment="Center" Height="77" Width="846" BorderBrush="{StaticResource ControlBackground}"/>
-                                    <Button Content="Search" FontSize="30" FontFamily="times new roman" FontWeight="Bold" Margin="872,0,0,0" Height="77" Width="150" CornerRadius="0,20,20,0">
-
-                                    </Button>
-
-                                </Grid>
-                            </Grid>
-                        </control:DropShadowPanel>
-
-                    </Grid>
-
-
-
+                    
                 </Grid>
-                <Button Margin="1192,737,0,0" VerticalAlignment="Top" Background="DarkGray" CornerRadius="180,20,0,20" BorderBrush="Gray" Opacity="1" Width="308" Height="263">
-                    <StackPanel Height="180" VerticalAlignment="Center" HorizontalAlignment="Right" Width="196">
-                        <Image Source="Assets\calendar.png" Height="180" Width="212" RequestedTheme="Default"/>
+
+
+                <Button Margin="0,0,0,0" VerticalAlignment="Bottom" Background="DarkGray" CornerRadius="180,0,0,0" BorderBrush="Transparent" Opacity="1" Width="150" Height="150" HorizontalAlignment="Right">
+                    <StackPanel Height="180" VerticalAlignment="Center" HorizontalAlignment="Left" Width="172" Margin="-42,0,0,0">
+                        <Image Source="Assets\calendar.png" Height="106" Width="81" RequestedTheme="Default" Margin="70,50,0,0"/>
+
                     </StackPanel>
                 </Button>
 
 
 
             </Grid>
-        </control:DropShadowPanel>
->>>>>>> Stashed changes
 
-    </Grid>
+            </control:DropShadowPanel>
+
+
+
+        </Grid>
+    
 </Page>
