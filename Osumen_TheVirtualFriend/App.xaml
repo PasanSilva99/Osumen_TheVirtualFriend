@@ -25,16 +25,17 @@
                         TintLuminosityOpacity="0.8"
                         FallbackColor="#FBFBFB"
                         />
+                    
 
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
                     <AcrylicBrush 
                         x:Key="WindowBackground"
                         BackgroundSource="HostBackdrop"
-                        TintColor="#333333"
+                        TintColor="#19002D"
                         TintOpacity="0.9"
-                        TintLuminosityOpacity="0.8"
-                        FallbackColor="#333333"
+                        TintLuminosityOpacity="0.9"
+                        FallbackColor="#19002D"
                         />
                     <AcrylicBrush 
                         x:Key="ControlBackground"
@@ -44,6 +45,10 @@
                         TintLuminosityOpacity="0.8"
                         FallbackColor="#FBFBFB"
                         />
+
+                    <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#787878"/>
+                    
+                    
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>

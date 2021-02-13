@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Osumen_TheVirtualFriend.ReminderUiMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Osumen_TheVirtualFriend"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="1920"
+    Height="1080"
+    Background="{ThemeResource WindowBackground}">
+
+    <Grid Width="1920" Height="1080" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1220"/>
+            <ColumnDefinition Width="700"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="200 13.5 0 0" HorizontalAlignment="Right">
+            <Grid Width="1009" Height="981"  Name="Section1"></Grid>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="25 13.5 25 0">
+            <Grid Width="647" Height="981" Name="Sec2">
+                
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
