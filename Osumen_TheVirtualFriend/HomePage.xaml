@@ -15,6 +15,7 @@
             <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
+
         <local:ChatControl Grid.Column="0" Margin="0,0,0,10"/>
         <ScrollViewer Grid.Column="1" Margin="0, 5, 10, 10">
             <controls:WrapPanel>
@@ -28,6 +29,7 @@
             </controls:WrapPanel>
 
         </ScrollViewer>
+
 
 
     </Grid>
