@@ -189,15 +189,15 @@
                         FallbackColor="#FBFBFB"
                         />
 
-<<<<<<< Updated upstream
-=======
+
                     <SolidColorBrush
                         x:Key="InputControlBack"
                         Color="#FBFBFB"/>
 
+
                     <SolidColorBrush x:Key="DarkButtonText" Color="#FFFF"/>
                     
->>>>>>> Stashed changes
+
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
                     <AcrylicBrush 
@@ -211,21 +211,23 @@
                     <AcrylicBrush 
                         x:Key="ControlBackground"
                         BackgroundSource="Backdrop"
-                        TintColor="#FBFBFB"
+                        TintColor="#333333"
                         TintOpacity="0.9"
                         TintLuminosityOpacity="0.8"
-                        FallbackColor="#FBFBFB"
+                        FallbackColor="#333333"
                         />
-<<<<<<< Updated upstream
-=======
+
                     
                     <SolidColorBrush
                         x:Key="InputControlBack"
                         Color="#4B4B4B"/>
 
+
                     <SolidColorBrush x:Key="DarkButtonText" Color="#FFFF"/>
                     
->>>>>>> Stashed changes
+
+                    
+
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
