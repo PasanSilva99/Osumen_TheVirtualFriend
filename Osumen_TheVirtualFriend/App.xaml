@@ -1,0 +1,131 @@
+﻿<Application
+    x:Class="Osumen_TheVirtualFriend.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Osumen_TheVirtualFriend">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <!--Where all the Light theme Brushes and colors define-->
+                    <AcrylicBrush x:Key="WindowBackground"
+                        BackgroundSource="HostBackdrop"
+                        TintColor="#FFFFFF"
+                        TintOpacity="0.9"
+                        TintLuminosityOpacity="0.6"
+                        FallbackColor="#FFFFFF" />
+
+                    <AcrylicBrush x:Key="NavigationBackground"
+                        BackgroundSource="Backdrop"
+                        TintColor="#F0F0F0"
+                        TintOpacity="0.9"
+                        TintLuminosityOpacity="0.6"
+                        FallbackColor="#F0F0F0" />
+
+                    <SolidColorBrush x:Key="NavigationItemBackground" Color="#FFFFFF"/>
+
+                    <SolidColorBrush x:Key="ChatBubbleAccent1" Color="#CCCCCC"/>
+
+                    <SolidColorBrush x:Key="ChatBubbleAccent2" Color="#B6AFFF"/>
+
+                    <SolidColorBrush x:Key="ButtonBGLight" Color="#DCDCDC"/>
+
+                    <SolidColorBrush x:Key="ButtonBGDark" Color="#C4C4C4"/>
+
+                    <SolidColorBrush x:Key="UserAccentSolid" Color="#9000FF"/>
+
+                    <AcrylicBrush x:Key="UserAccentAcrylic"
+                        BackgroundSource="Backdrop"
+                        TintColor="#9000FF"
+                        TintOpacity="0.9"
+                        TintLuminosityOpacity="0.6"
+                        FallbackColor="#9000FF" />
+
+                    <AcrylicBrush x:Key="ControlBackground"
+                        BackgroundSource="Backdrop"
+                        TintColor="#FBFBFB"
+                        TintOpacity="0.9"
+                        TintLuminosityOpacity="0.6"
+                        FallbackColor="#FBFBFB" />
+
+                    <SolidColorBrush x:Key="TextNormal" Color="#000000"/>
+
+                    <SolidColorBrush x:Key="TextDimmed" Color="#333333"/>
+
+                    <SolidColorBrush x:Key="TextWhite" Color="#FFFFFF"/>
+
+                    <SolidColorBrush x:Key="TextBlack" Color="#000000"/>
+
+                    <SolidColorBrush x:Key="TextDimmedWhite" Color="#E2E2E2"/>
+
+                    <SolidColorBrush x:Key="TextBimmedBlack" Color="#2A2A2A"/>
+
+                    <SolidColorBrush x:Key="TextInvert" Color="#FFFFFF"/>
+
+
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <!--Where all the Dark theme Brushes and colors define-->
+                    <!--The x:Key should match the x:Key on the light theme-->
+                    <AcrylicBrush x:Key="WindowBackground"
+                        BackgroundSource="HostBackdrop"
+                        TintColor="#19002D"
+                        TintOpacity="0.9"
+                        TintLuminosityOpacity="0.6"
+                        FallbackColor="#19002D" />
+
+                    <AcrylicBrush x:Key="NavigationBackground"
+                        BackgroundSource="Backdrop"
+                        TintColor="#333333"
+                        TintOpacity="0.9"
+                        TintLuminosityOpacity="0.6"
+                        FallbackColor="#333333" />
+
+                    <SolidColorBrush x:Key="NavigationItemBackground" Color="#5F5F5F"/>
+
+                    <SolidColorBrush x:Key="ChatBubbleAccent1" Color="#404040"/>
+
+                    <SolidColorBrush x:Key="ChatBubbleAccent12" Color="#542186"/>
+
+                    <SolidColorBrush x:Key="ButtonBGLight" Color="#4B4B4B"/>
+
+                    <SolidColorBrush x:Key="ButtonBGDark" Color="#404040"/>
+
+                    <SolidColorBrush x:Key="UserAccentSolid" Color="#542186"/>
+
+                    <AcrylicBrush x:Key="UserAccentAcrylic"
+                        BackgroundSource="Backdrop"
+                        TintColor="#542186"
+                        TintOpacity="0.9"
+                        TintLuminosityOpacity="0.6"
+                        FallbackColor="#542186" />
+
+                    <AcrylicBrush x:Key="ControlBackground"
+                        BackgroundSource="Backdrop"
+                        TintColor="#333333"
+                        TintOpacity="0.9"
+                        TintLuminosityOpacity="0.6"
+                        FallbackColor="#333333" />
+
+                    <SolidColorBrush x:Key="TextNormal" Color="#FFFFFF"/>
+
+                    <SolidColorBrush x:Key="TextDimmed" Color="#ECECEC"/>
+
+                    <SolidColorBrush x:Key="TextWhite" Color="#FFFFFF"/>
+
+                    <SolidColorBrush x:Key="TextBlack" Color="#000000"/>
+
+                    <SolidColorBrush x:Key="TextDimmedWhite" Color="#E2E2E2"/>
+
+                    <SolidColorBrush x:Key="TextBimmedBlack" Color="#2A2A2A"/>
+
+                    <SolidColorBrush x:Key="TextInvert" Color="#000000"/>
+                    
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>
