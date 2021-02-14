@@ -20,16 +20,17 @@ namespace Osumen_TheVirtualFriend
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MedihelpPage : Page
+    public sealed partial class TasksSec2 : Page
     {
-        public MedihelpPage()
+        public TasksSec2()
         {
             this.InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            TasksSec2TextBox TasksS2textbx = new TasksSec2TextBox();
+            TasksSec2txtbx.Children.Add(TasksS2textbx);
+            TasksDatePicker TasksS2DatePicker = new TasksDatePicker();
+            TasksSec2DatePicker.Children.Add(TasksS2DatePicker);
+            TasksTimePicker TasksS2TimePicker = new TasksTimePicker();
+            TasksSec2TimePicker.Children.Add(TasksS2TimePicker);
         }
     }
 }

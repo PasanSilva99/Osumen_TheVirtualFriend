@@ -1,4 +1,3 @@
-﻿using Windows.UI.Xaml.Controls;
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,11 +25,7 @@ namespace Osumen_TheVirtualFriend
         public MainPage()
         {
             this.InitializeComponent();
-<<<<<<< Updated upstream
-=======
-
-            PageLoader.Navigate(typeof(MedihelpPage));
->>>>>>> Stashed changes
+            PageLoader.Navigate(typeof(TasksUIMain));
         }
     }
 }

@@ -20,16 +20,19 @@ namespace Osumen_TheVirtualFriend
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MedihelpPage : Page
+    public sealed partial class ReminderUISec2 : Page
     {
-        public MedihelpPage()
+        public ReminderUISec2()
         {
             this.InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+            ReminderDatePicker reminderDatePicker = new ReminderDatePicker();
+            datepicker.Children.Add(reminderDatePicker);
+            TimePicker timePicker = new TimePicker();
+            timepicker1.Children.Add(timePicker);
+            ReminderDropdwn reminderDropdwn = new ReminderDropdwn();
+            dropdwn.Children.Add(reminderDropdwn);
+            ReminderSec2Textbox reminderSec2Textbox = new ReminderSec2Textbox();
+            sectxt.Children.Add(reminderSec2Textbox);
+      }
     }
 }

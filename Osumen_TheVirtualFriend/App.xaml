@@ -4,49 +4,4 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Osumen_TheVirtualFriend">
 
-    <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.ThemeDictionaries>
-                <ResourceDictionary x:Key="Light">
-                    <AcrylicBrush 
-                        x:Key="WindowBackground"
-                        BackgroundSource="HostBackdrop"
-                        TintColor="#FFFFFF"
-                        TintOpacity="0.9"
-                        TintLuminosityOpacity="0.8"
-                        FallbackColor="#FFFFFF"
-                        />
-
-                    <AcrylicBrush 
-                        x:Key="ControlBackground"
-                        BackgroundSource="Backdrop"
-                        TintColor="#FBFBFB"
-                        TintOpacity="0.9"
-                        TintLuminosityOpacity="0.8"
-                        FallbackColor="#FBFBFB"
-                        />
-
-                </ResourceDictionary>
-                <ResourceDictionary x:Key="Dark">
-                    <AcrylicBrush 
-                        x:Key="WindowBackground"
-                        BackgroundSource="HostBackdrop"
-                        TintColor="#333333"
-                        TintOpacity="0.9"
-                        TintLuminosityOpacity="0.8"
-                        FallbackColor="#333333"
-                        />
-                    <AcrylicBrush 
-                        x:Key="ControlBackground"
-                        BackgroundSource="Backdrop"
-                        TintColor="#FBFBFB"
-                        TintOpacity="0.9"
-                        TintLuminosityOpacity="0.8"
-                        FallbackColor="#FBFBFB"
-                        />
-                </ResourceDictionary>
-            </ResourceDictionary.ThemeDictionaries>
-        </ResourceDictionary>
-    </Application.Resources>
-
 </Application>

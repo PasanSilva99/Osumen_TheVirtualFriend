@@ -20,16 +20,15 @@ namespace Osumen_TheVirtualFriend
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MedihelpPage : Page
+    public sealed partial class ReminderUiMain : Page
     {
-        public MedihelpPage()
+        public ReminderUiMain()
         {
             this.InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            ReminderSec1 reminderSec1 = new ReminderSec1();
+            Section1.Children.Add(reminderSec1);
+            ReminderUISec2 reminderUISec2 = new ReminderUISec2();
+            Sec2.Children.Add(reminderUISec2);
         }
     }
 }

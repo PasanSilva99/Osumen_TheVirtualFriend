@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="53a08b99-d277-4f70-8955-51a8ffc788bd"
-    Publisher="CN=Gai Kanchana"
+    Name="366f6216-7e29-4a23-9123-7c91205cffdd"
+    Publisher="CN=pasan"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="53a08b99-d277-4f70-8955-51a8ffc788bd" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="366f6216-7e29-4a23-9123-7c91205cffdd" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Osumen_TheVirtualFriend</DisplayName>
-    <PublisherDisplayName>Gai Kanchana</PublisherDisplayName>
+    <PublisherDisplayName>pasan</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
