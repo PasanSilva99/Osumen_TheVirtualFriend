@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Osumen_TheVirtualFriend.appointmentpage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Osumen_TheVirtualFriend"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="backgridappt" Background="{StaticResource WindowBackground}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="Searchgrid" Grid.Column="0">
+            <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
+                <Grid x:Name="searchshadowgrid" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Rectangle Fill="{StaticResource ControlBackground}" Margin="20,20,20,20" RadiusX="20" RadiusY="20" />
+                    <TextBlock Margin="90,56,0,0" Text="Search for your Doctor..." TextWrapping="Wrap" FontSize="21" FontFamily="times new roman" Height="28" VerticalAlignment="Top" />
+                    <TextBox Margin="85,151,85,0" Text="TextBox" TextWrapping="Wrap" CornerRadius="15" x:Name="Doctortxt" Height="32" VerticalAlignment="Top"/>
+                    <TextBlock Margin="95,128,0,0" Text="Doctor Name" TextWrapping="Wrap" Height="19" VerticalAlignment="Top"/>
+                    <TextBox Margin="85,251,85,0" Text="TextBox" TextWrapping="Wrap" CornerRadius="15" x:Name="hospitaltxt" Height="32" VerticalAlignment="Top"/>
+                    <TextBlock Margin="95,228,0,0" Text="Hospital Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock Margin="95,328,0,0" Text="Specialization" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock Margin="95,428,0,0" Text="Date" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <ComboBox Margin="85,351,82,0" CornerRadius="15" x:Name="specializationtxt" HorizontalAlignment="Stretch" Height="32"/>
+                    <CalendarDatePicker Margin="85,451,85,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" CornerRadius="15" x:Name="searchdatepicker" Height="32"/>
+                    <Button Background="{StaticResource ButtonBGDark}" Grid.Row="0" VerticalAlignment="Top" CornerRadius="16,16,16,16" Margin="190,526,0,0" Click="Button_Click" x:Name="searchbutton" Height="38" Width="120">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Assets/magnifying-glass.png" Height="30" Width="22"/>
+                            <TextBlock Text="Search" Width="68" Margin="10,0,0,0" Foreground="{StaticResource TextNormal}" FontSize="22" />
+                        </StackPanel>
+                    </Button>
+
+
+                </Grid>
+            </control:DropShadowPanel>
+        </Grid>
+
+        <Grid x:Name="Showgrid" Grid.Column="1">
+            <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
+                <Grid x:Name="showshadowgrid" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Rectangle Fill="{StaticResource ControlBackground}" Margin="0,20,20,20" RadiusX="20" RadiusY="20" />
+                    <Grid>
+                        <Image Source="/Assets/apointment.png"  Margin="180,96,180,96" x:Name="apptbackimage"/>
+                        <Image Source="/Assets/apointment.png"  Margin="856,27,53,859" x:Name="searchbackimage" Visibility="Collapsed"/>
+
+                        <control:DataGrid x:Name="apptdatagrid" Visibility="Collapsed" CornerRadius="30" Margin="30,150,50,0" Grid.Column="0"/>
+
+                    </Grid>
+
+
+
+
+                </Grid>
+            </control:DropShadowPanel>
+        </Grid>
+    </Grid>
+</Page>
