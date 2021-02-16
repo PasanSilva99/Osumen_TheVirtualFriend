@@ -36,10 +36,10 @@
                         <Rectangle x:Name="rect_Searchbar" Fill="{StaticResource TextBimmedBlack}" RadiusX="16" RadiusY="16" Height="32" VerticalAlignment="Top" />
                     </control:DropShadowPanel>
 
-                    <TextBox Style="{StaticResource ComboBoxTextBoxStyle}" Grid.Row="0" Grid.Column="0" BorderBrush="Transparent" BorderThickness="2" PlaceholderText="Search For Symptoms..." Height="32" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" CornerRadius="16,0,0,16" Margin="0,0,-15,0"/>
+                    <TextBox Grid.Row="0" Grid.Column="0" Background="{StaticResource ControlBackground}" BorderBrush="Transparent" BorderThickness="1" PlaceholderText="Search For Symptoms..." Height="32" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" CornerRadius="16,0,0,16" Margin="0,0,-15,0"/>
                     <Button Background="Gray" Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="16,16,16,16">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Assets/magnifying-glass.svg" />
+                            <Image Source="Assets/magnifying-glass.png" Stretch="UniformToFill" />
 
                             <TextBlock Text="Search" Margin="10,0,0,0" Foreground="{StaticResource ButtonBGDark}"/>
                         </StackPanel>
@@ -47,21 +47,22 @@
 
                     <Frame x:Name="SearchLoader" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20,0,20"/>
 
-                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="grid_tip" Margin="0,50,0,0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="36"/>
-                            <RowDefinition Height="3*"/>
-                        </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="grid_tip" Margin="0,50,0,98">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="6*" MinHeight="500"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="36"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
 
 
-                        <Image Grid.Row="0" Source="/Assets/Doctor.png" Height="500"/>
-                        <TextBlock Grid.Row="1" Text="Daily Tip" HorizontalAlignment="Center" FontSize="34"/>
-                        <TextBlock Grid.Row="2" Text="Eat With Purpose" HorizontalAlignment="Center" FontSize="18"/>
-                        <TextBlock Grid.Row="3" Text="Everything you consume should have substantial nutritional value. 'You want the most nutritional bang for your buck,' says Dan Trink, C.S.C.S., a strength coach and trainer. 'Everything you eat should serve some sort of nutriional purpose in your body, fuel your worouts, and (be) geared toward optimizing your body.'" TextWrapping="Wrap" Padding="50, 0, 50, 0" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" TextAlignment="Center"/>
-                    </Grid>
-
+                            <Image Grid.Row="0" Source="/Assets/Doctor.png" Height="500"/>
+                            <TextBlock Grid.Row="1" Text="Daily Tip" HorizontalAlignment="Center" FontSize="34"/>
+                            <TextBlock Grid.Row="2" Text="Eat With Purpose" HorizontalAlignment="Center" FontSize="18"/>
+                            <TextBlock Grid.Row="3" Text="Everything you consume should have substantial nutritional value. 'You want the most nutritional bang for your buck,' says Dan Trink, C.S.C.S., a strength coach and trainer. 'Everything you eat should serve some sort of nutriional purpose in your body, fuel your worouts, and (be) geared toward optimizing your body.'" TextWrapping="Wrap" Padding="50, 0, 50, 0" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" TextAlignment="Center"/>
+                        </Grid>
+                    </ScrollViewer>
                 </Grid>
 
 
