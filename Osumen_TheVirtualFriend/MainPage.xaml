@@ -9,7 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Frame x:Name="loader"/>
+
+        <Frame x:Name="SplashFrame"></Frame>
+
 
     </Grid>
 </Page>

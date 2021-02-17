@@ -129,6 +129,9 @@
       <DependentUpon>medihelp.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -136,6 +139,14 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+
+    <Content Include="Assets\Cry.png" />
+    <Content Include="Assets\exited.png" />
+    <Content Include="Assets\meh.png" />
+    <Content Include="Assets\sad.png" />
+    <Content Include="Assets\smile.png" />
+    <Content Include="Assets\SplashBackground.png" />
+
     <Content Include="Assets\apointment.png" />
     <Content Include="Assets\calendar.png" />
     <Content Include="Assets\Doctor.png" />
@@ -164,7 +175,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+
+    <Page Include="Splash.xaml">
+
     <Page Include="medihelp.xaml">
+
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
