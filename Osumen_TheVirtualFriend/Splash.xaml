@@ -1,0 +1,55 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Osumen_TheVirtualFriend"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    x:Class="Osumen_TheVirtualFriend.Splash"
+    mc:Ignorable="d"
+    Background="{StaticResource WindowBackground}">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <Grid MinHeight="768" MinWidth="1024">
+            <Image Margin="0,0,0,0"  Source="/Assets/SplashBackground.png" Stretch="UniformToFill">
+
+            </Image>
+
+            <Grid Margin="15,100,15,0" Height="250" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="66"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="TxtBl" HorizontalAlignment="Center" Grid.Row="0" Text="Good Morning!!!" Foreground="{StaticResource TextWhite}" TextWrapping="Wrap" FontSize="48" />
+                <TextBlock x:Name="TxtB2" HorizontalAlignment="Center" Grid.Row="1" Text="&quot;Don't be pushed around by the fears in your mind...&quot;" Foreground="{StaticResource TextWhite}"
+                       TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Margin="42,5,49,0" MinHeight="15"/>
+
+            </Grid>
+
+
+            <Grid  Margin="0,0,0,23" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0" Source="/Assets/smile.png" Margin="22,0,22,80" MaxHeight="150"/>
+                <Image Grid.Column="1" Source="/Assets/exited.png" Margin="22,0,22,80" MaxHeight="150"/>
+                <Image Grid.Column="2" Source="/Assets/sad.png" Margin="22,0,22,80" MaxHeight="150"/>
+                <Image Grid.Column="3" Source="/Assets/meh.png" Margin="20,0,22,80" MaxHeight="150"/>
+                <Image Grid.Column="4" Source="/Assets/Cry.png" Margin="20,0,22,80" MaxHeight="150"/>
+
+            </Grid>
+            <Grid HorizontalAlignment="Center" MinWidth="190" VerticalAlignment="Center">
+                <Image  Margin="0,0,0,0" Source="/Assets/smile.png" MaxWidth="200"/>
+            </Grid>
+
+
+
+        </Grid>
+    </ScrollViewer>
+</Page>
