@@ -32,5 +32,10 @@ namespace Osumen_TheVirtualFriend
          
 
         }
+
+        private void Img_smile_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }

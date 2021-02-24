@@ -177,6 +177,9 @@
     </Page>
 
     <Page Include="Splash.xaml">
+    <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      </Page>
 
     <Page Include="medihelp.xaml">
 
