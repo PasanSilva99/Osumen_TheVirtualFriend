@@ -8,6 +8,14 @@
     x:Class="Osumen_TheVirtualFriend.Splash"
     mc:Ignorable="d"
     Background="{StaticResource WindowBackground}">
+    <Page.Resources>
+        <Storyboard x:Name="myStoryboard">
+            <DoubleAnimation
+                     Storyboard.TargetName="(Img_Animated)"
+                        Storyboard.TargetProperty="Opacity"></DoubleAnimation>
+
+        </Storyboard>
+    </Page.Resources>
 
     <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
         <Grid MinHeight="768" MinWidth="1024">
@@ -34,20 +42,28 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
+                
 
                 </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="0" Source="/Assets/smile.png" Margin="22,0,22,80" MaxHeight="150"/>
-                <Image Grid.Column="1" Source="/Assets/exited.png" Margin="22,0,22,80" MaxHeight="150"/>
-                <Image Grid.Column="2" Source="/Assets/sad.png" Margin="22,0,22,80" MaxHeight="150"/>
-                <Image Grid.Column="3" Source="/Assets/meh.png" Margin="20,0,22,80" MaxHeight="150"/>
-                <Image Grid.Column="4" Source="/Assets/Cry.png" Margin="20,0,22,80" MaxHeight="150"/>
+                <Image x:Name="Img_smile" Grid.Column="0" Source="/Assets/smile.png" Margin="22,0,22,80" MaxHeight="150" DoubleTapped="Img_smile_DoubleTrapped" Tapped="Img_smile_Tapped"/>
+                <Image x:Name="Img_exited" Grid.Column="1" Source="/Assets/exited.png" Margin="22,0,22,80" MaxHeight="150" DoubleTapped="Img_exited_DoubleTrapped" Tapped="Img_exited_Tapped"/>
+                <Image x:Name="Img_sad" Grid.Column="2" Source="/Assets/sad.png" Margin="22,0,22,80" MaxHeight="150" DoubleTapped="Img_sad_DoubleTrapped" Tapped="Img_sad_Tapped"/>
+                <Image x:Name="Img_mesh" Grid.Column="3" Source="/Assets/meh.png" Margin="20,0,22,80" MaxHeight="150" DoubleTapped="Img_mesh_DoubleTrapped" Tapped="Img_mesh_Tapped"/>
+                <Image x:Name="Img_cry" Grid.Column="4" Source="/Assets/Cry.png" Margin="20,0,22,80" MaxHeight="150" DoubleTapped="Img_cry_DoubleTrapped" Tapped="Img_cry_Tapped"/>
+
+
+               
+
+
+
 
             </Grid>
+            
             <Grid HorizontalAlignment="Center" MinWidth="190" VerticalAlignment="Center">
-                <Image  Margin="0,0,0,0" Source="/Assets/smile.png" MaxWidth="200"/>
+                <Image x:Name="Img_Animated" Margin="0,0,0,0" Source="/Assets/smile.png" MaxWidth="200"/>
             </Grid>
-
+            
 
 
         </Grid>
