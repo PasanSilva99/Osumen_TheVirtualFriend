@@ -9,6 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Frame x:Name="PageLoader" Margin="150,0,0,0"/>
+        <local:NavigationControl HorizontalAlignment="Left" Margin="-125,0,0,0"/>
+        
     </Grid>
 </Page>
