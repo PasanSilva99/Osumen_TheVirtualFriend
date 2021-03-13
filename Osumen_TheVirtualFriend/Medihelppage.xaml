@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Osumen_TheVirtualFriend.MainPage"
+    x:Class="Osumen_TheVirtualFriend.Medihelppage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Osumen_TheVirtualFriend"
@@ -9,7 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Frame x:Name="PageLoader" Margin="150,0,0,0"/>
-        <local:NavigationControl HorizontalAlignment="Left" Margin="-125,0,0,0"/>
+
     </Grid>
 </Page>

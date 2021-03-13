@@ -128,6 +128,9 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="appointmentpage.xaml.cs">
+      <DependentUpon>appointmentpage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,13 @@
     <Compile Include="TasksWidgetControl.xaml.cs">
       <DependentUpon>TasksWidgetControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="medihelp.xaml.cs">
+      <DependentUpon>medihelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -149,15 +159,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\987837452c4b4fc1387635ce1e04933c.jpg" />
-    <Content Include="Assets\calendar.png" />
     <Content Include="Assets\diary.png" />
-    <Content Include="Assets\exited.png" />
     <Content Include="Assets\house.png" />
     <Content Include="Assets\reminders.png" />
     <Content Include="Assets\send %281%29.png" />
     <Content Include="Assets\send.png" />
     <Content Include="Assets\to-do-list.png" />
     <Content Include="Assets\webcam.png" />
+
+    <Content Include="Assets\Cry.png" />
+    <Content Include="Assets\exited.png" />
+    <Content Include="Assets\meh.png" />
+    <Content Include="Assets\sad.png" />
+    <Content Include="Assets\smile.png" />
+    <Content Include="Assets\SplashBackground.png" />
+
+    <Content Include="Assets\apointment.png" />
+    <Content Include="Assets\calendar.png" />
+    <Content Include="Assets\Doctor.png" />
+    <Content Include="Assets\Doctor.svg" />
+    <Content Include="Assets\magnifying-glass.png" />
+    <Content Include="Assets\magnifying-glass.svg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -184,6 +206,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="appointmentpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -200,6 +226,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+
+    <Page Include="Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+
+    <Page Include="medihelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite">
@@ -209,6 +245,9 @@
       <Version>6.2.12</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
       <Version>6.1.1</Version>
     </PackageReference>
   </ItemGroup>
