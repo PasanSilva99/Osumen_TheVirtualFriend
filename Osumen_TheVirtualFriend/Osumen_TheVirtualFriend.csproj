@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChatBubble.xaml.cs">
+      <DependentUpon>ChatBubble.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChatControl.xaml.cs">
       <DependentUpon>ChatControl.xaml</DependentUpon>
     </Compile>
@@ -166,14 +169,12 @@
     <Content Include="Assets\send.png" />
     <Content Include="Assets\to-do-list.png" />
     <Content Include="Assets\webcam.png" />
-
     <Content Include="Assets\Cry.png" />
     <Content Include="Assets\exited.png" />
     <Content Include="Assets\meh.png" />
     <Content Include="Assets\sad.png" />
     <Content Include="Assets\smile.png" />
     <Content Include="Assets\SplashBackground.png" />
-
     <Content Include="Assets\apointment.png" />
     <Content Include="Assets\calendar.png" />
     <Content Include="Assets\Doctor.png" />
@@ -194,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ChatBubble.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ChatControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -226,12 +231,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-
     <Page Include="Splash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-
     <Page Include="medihelp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
