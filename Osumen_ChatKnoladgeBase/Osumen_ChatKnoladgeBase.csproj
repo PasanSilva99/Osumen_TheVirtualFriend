@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=21.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Cells.21.3.0\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
     <Reference Include="ejml-core-0.39, Version=0.39.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Stanford.NLP.CoreNLP.4.2.0.1\lib\ejml-core-0.39.dll</HintPath>
     </Reference>
@@ -222,6 +225,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatGen.cs" />
     <Compile Include="Classifier.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="NLP\NLPProcessor.cs" />
@@ -289,6 +293,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Trainer\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Osumen_TheVirtualFriendML.Model\Osumen_TheVirtualFriendML.Model.csproj">
+      <Project>{FC391285-60B8-4F6E-9442-FF36E2C86541}</Project>
+      <Name>Osumen_TheVirtualFriendML.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

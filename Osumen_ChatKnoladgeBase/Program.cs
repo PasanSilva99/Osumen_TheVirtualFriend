@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using static Osumen_ChatKnoladgeBase.NLPProcessor;
 using static Osumen_ChatKnoladgeBase.Classifier;
 using Osumen_ChatKnoladgeBase.Trainer;
+using Osumen_TheVirtualFriendML.Model;
 
 namespace Osumen_ChatKnoladgeBase
 {
@@ -63,13 +64,30 @@ namespace Osumen_ChatKnoladgeBase
 
                 ModelHandler hn = new ModelHandler();
 
-                hn.readTrainData();
+                var intents = hn.ReadTrainData();
 
                 var trainingData = hn.fitDataAsTagPattern();
 
                 hn.SelializeTrainingTAG(trainingData);
 
+                hn.CraeteCSV(trainingData);
 
+                var input = new ModelInput()
+                {
+                    Col1 = inputString
+                };
+
+                ModelOutput modelOutput = ConsumeModel.Predict(input);
+
+                String PredectedTag = modelOutput.Prediction;
+                var _Score = modelOutput.Score;
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"\n Predected Tag : {PredectedTag}\n\n");
+                String Reply = new ChatGen().GenerateReply(PredectedTag, intents);
+                Console.WriteLine("Reply : " + Reply);
+                Console.ResetColor();
+                
                 Console.Write("Re run? (y/n) > ");
 
                 if (Console.ReadLine() != "y")

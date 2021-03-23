@@ -16,13 +16,17 @@ namespace Osumen_ChatKnoladgeBase.Trainer
         {
             public String Tag { get; set; }
             public String[] Patterns { get; set; }
-            public String[] Responces { get; set; }
+            public String[] Responses { get; set; }
         }
+
+        Intent[] trainintents = null;
 
         public class IntentTrainingDataTAG
         {
             [LoadColumn(0)]
+            [ColumnName("Label")]
             public String Tag { get; set; }
+            [LoadColumn(1)]
             public String Pattern { get; set; }
         }
 
@@ -30,7 +34,6 @@ namespace Osumen_ChatKnoladgeBase.Trainer
 
         public void saveModel()
         {
-
             using (StreamWriter file = File.CreateText(@"D:\intents.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
@@ -38,7 +41,7 @@ namespace Osumen_ChatKnoladgeBase.Trainer
             }
         }
 
-        public async void readTrainData()
+        public Intent[] ReadTrainData()
         {
             Console.WriteLine("##########################################");
             Console.WriteLine("              Reading File ");
@@ -52,14 +55,37 @@ namespace Osumen_ChatKnoladgeBase.Trainer
             }
             Console.WriteLine("##########################################");
 
+            return trainintents;
+
         }
 
-        Intent[] trainintents = null;
+        
 
         public void TrainModel()
         {
             MLContext mLContext = new MLContext();
-            IDataView data = mLContext.Data.LoadFromEnumerable<Intent>(trainintents);
+
+            TextLoader textLoader = mLContext.Data.CreateTextLoader<IntentTrainingDataTAG>(separatorChar: ',', hasHeader: false);
+
+            IDataView data = textLoader.Load(@"D:\intentStr.txt");
+
+
+        }
+
+        public Intent FindIntent(String tag, Intent[] intent)
+        {
+            Console.WriteLine("Searching Tag : " + tag);
+
+            foreach(var i in intent)
+            {
+                Console.WriteLine("Tag: " + i.Tag.ToLower() + "?,");
+
+                if(i.Tag.ToLower() == tag.ToLower())
+                {
+                    return i;
+                }
+            }
+            return null;
         }
 
         public IntentTrainingDataTAG[] fitDataAsTagPattern()
@@ -108,6 +134,17 @@ namespace Osumen_ChatKnoladgeBase.Trainer
 
         }
 
+        public void CraeteCSV(IntentTrainingDataTAG[] tr)
+        {
+            List<String> intentsStr = new List<String>();
+
+            foreach(var inte in tr)
+            {
+                intentsStr.Add(inte.Tag + "," + inte.Pattern + "\n");
+            }
+
+            File.WriteAllLines(@"D:\intentStr.txt", intentsStr);
+        }
 
     }
 }
