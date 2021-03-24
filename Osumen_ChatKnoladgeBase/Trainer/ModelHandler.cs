@@ -69,7 +69,6 @@ namespace Osumen_ChatKnoladgeBase.Trainer
 
             IDataView data = textLoader.Load(@"D:\intentStr.txt");
 
-
         }
 
         public Intent FindIntent(String tag, Intent[] intent)

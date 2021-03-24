@@ -27,8 +27,6 @@ namespace Osumen_ChatKnoladgeBase
 
                 String Reply = "";
 
-                
-
                 return Reply;
             }
             else
