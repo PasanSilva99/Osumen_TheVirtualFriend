@@ -134,6 +134,9 @@
     <Compile Include="appointmentpage.xaml.cs">
       <DependentUpon>appointmentpage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JournalEntryCustomControl.xaml.cs">
+      <DependentUpon>JournalEntryCustomControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -212,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="appointmentpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JournalEntryCustomControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
