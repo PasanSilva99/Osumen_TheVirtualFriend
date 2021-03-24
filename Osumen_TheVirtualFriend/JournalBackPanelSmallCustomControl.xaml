@@ -42,11 +42,7 @@
                             <TextBox Grid.Column="0" PlaceholderText="Search" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,0,0,20" BorderBrush="Transparent" BorderThickness="0" Padding="10,5,0,0"/>
                             <Image Source="Assets/search.png" Width="30" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0"/>
 
-
-
                         </Grid>
-
-
 
                     </Grid>
                     <ScrollViewer Grid.RowSpan="4" Grid.Row="2" Grid.Column="0">
@@ -66,18 +62,9 @@
                         </StackPanel>
                     </ScrollViewer>
 
-
-
-
-
-
-
-
-
                 </Grid>
 
             </Grid>
-
 
         </control:DropShadowPanel>
 
