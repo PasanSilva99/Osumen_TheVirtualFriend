@@ -226,6 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatGen.cs" />
+    <Compile Include="Chat\ChatAI.cs" />
     <Compile Include="Classifier.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="NLP\NLPProcessor.cs" />

@@ -8,6 +8,7 @@ using static Osumen_ChatKnoladgeBase.NLPProcessor;
 using static Osumen_ChatKnoladgeBase.Classifier;
 using Osumen_ChatKnoladgeBase.Trainer;
 using Osumen_TheVirtualFriendML.Model;
+using Osumen_ChatKnoladgeBase.Chat;
 
 namespace Osumen_ChatKnoladgeBase
 {
@@ -57,12 +58,13 @@ namespace Osumen_ChatKnoladgeBase
                 Console.WriteLine("*********************************************");
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("All Tasks Complete");
-
+                
                 Console.ResetColor();
 
                 Console.ForegroundColor = ConsoleColor.Cyan;
 
                 ModelHandler hn = new ModelHandler();
+
 
                 var intents = hn.ReadTrainData();
 
@@ -87,7 +89,10 @@ namespace Osumen_ChatKnoladgeBase
                 String Reply = new ChatGen().GenerateReply(PredectedTag, intents);
                 Console.WriteLine("Reply : " + Reply);
                 Console.ResetColor();
-                
+
+                ChatAI chat = new ChatAI();
+                chat.GetPlaceHolders("Word1 *~~*#test#*~~* word2 word3 *~~*#Word4#*~~**~~*# word34#*~~*");
+
                 Console.Write("Re run? (y/n) > ");
 
                 if (Console.ReadLine() != "y")
