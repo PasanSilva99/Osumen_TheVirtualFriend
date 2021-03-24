@@ -5,10 +5,80 @@
     xmlns:local="using:Osumen_TheVirtualFriend"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:control ="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Margin="25,25,25,25">
-        
+
+        <Grid>
+            <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
+                <Grid Padding="0,0,0,0" Background="#ffffff" CornerRadius="20,20,20,20" Grid.RowSpan="6">
+                    <Grid Background="#FFFFFF">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="0.45*" />
+                        </Grid.ColumnDefinitions>
+                        <local:JournalBackPanelSmallCustomControl  Margin="-10,-10,0,-10" Grid.Column="0"/>
+                        <local:JournalPageCustomControl Grid.Column="1" Margin="10,10,10,10"/>
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10" />
+                                <ColumnDefinition Width="160" />
+
+
+                            </Grid.ColumnDefinitions>
+
+                            <control:DropShadowPanel Margin="10,10,10,10" Grid.Column="1" Grid.Row="1" BlurRadius="30.0" ShadowOpacity="0.1" OffsetX="0.0" OffsetY="0.0" Color="Black" VerticalAlignment="Top">
+                                <Button Background="{StaticResource NavigationItemBackground}"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" >
+                                    <Image Source="/Assets/pictures.svg" Margin="10,10,10,10" />
+                                </Button>
+                            </control:DropShadowPanel>
+
+                            <control:DropShadowPanel Margin="10,10,10,10" Grid.Column="1" Grid.Row="2" BlurRadius="30" ShadowOpacity="0.1" Color="Black" VerticalAlignment="Top">
+                                <Button Background="{StaticResource NavigationItemBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" >
+                                    <Image Source="/Assets/happy.svg" Margin="10,10,10,10" ></Image>
+                                </Button>
+                            </control:DropShadowPanel>
+                            <control:DropShadowPanel Margin="10,10,10,10" Grid.Column="1" Grid.Row="3" BlurRadius="30" ShadowOpacity="0.1" Color="Black" VerticalAlignment="Top">
+                                <Button Background="{StaticResource NavigationItemBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" >
+                                    <Image Source="/Assets/play-button.png"  Margin="10,10,10,10" />
+                                </Button>
+                            </control:DropShadowPanel>
+                            <control:DropShadowPanel Margin="10,10,10,10" Grid.Column="1" Grid.Row="4" BlurRadius="30" ShadowOpacity="0.1" Color="Black" VerticalAlignment="Top">
+                                <Button Background="{StaticResource NavigationItemBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" >
+                                    <Image Source="/Assets/microphone.png"  Margin="10,10,10,10" />
+                                </Button>
+                            </control:DropShadowPanel>
+
+
+
+
+                        </Grid>
+
+
+
+
+
+                    </Grid>
+
+                </Grid>
+            </control:DropShadowPanel>
+        </Grid>
+
+
+
     </Grid>
+
+
+
 </Page>
