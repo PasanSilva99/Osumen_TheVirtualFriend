@@ -11,8 +11,6 @@
     d:DesignWidth="400">
 
     <Grid Margin="10,10,10,10">
-
-
         <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
             <Grid Margin="0,0,0,0" Background="White" CornerRadius="20,20,20,20">
                 <Grid Background="#F6F3E7">
@@ -37,43 +35,20 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
-
-
-
-
                         </Grid.RowDefinitions>
                         <TextBlock Style="{ThemeResource TitleTextBlockStyle}"
                    Grid.Row="1"
                    Text="Title:" FontSize="14" FontFamily="Yu Gothic UI Semibold"  Margin="10,15,15,8"/>
-                        <TextBox HorizontalAlignment="Stretch"
-                 VerticalAlignment="Stretch"
-                 Text="{Binding Path=Title, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
-                 Grid.Row="2" BorderBrush="{ThemeResource AppBarBorderThemeBrush}" x:Name="txtbox_Title" />
-
+                        <RichEditBox Grid.Row="2" x:Name="txtbox_Title" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            
+                        </RichEditBox>
                         <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}"
                    Grid.Row="5"
                    Text="Text:" Foreground="#FF494848" FontSize="14" FontFamily="Yu Gothic Light"  Margin="10,15,15,8"/>
-                        <TextBox
-                 AcceptsReturn="True"
-                 IsTextPredictionEnabled="False"
-                 Text="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
-                 Grid.Row="6" BorderBrush="{ThemeResource AppBarBorderThemeBrush}" >
-                            <TextBox.Foreground>
-                                <SolidColorBrush Color="{ThemeResource SystemBaseMediumColor}"/>
-                            </TextBox.Foreground>
-                        </TextBox>
-                        <Image x:Name="image" HorizontalAlignment="Left" Height="32" Margin="10,10,10,10" VerticalAlignment="Top" Width="40" Source="ms-appx:///Assets/Pen-Free-Download-PNG.png" RenderTransformOrigin="-2.024,-6.382" Grid.RowSpan="2" Stretch="Fill"/>
-                        <CommandBar Background="#F6F3E7">
-                            <CommandBar.Content>
-                                <Grid/>
-                            </CommandBar.Content>
-                            <AppBarButton Icon="Save" Label="Save"/>
-                            <AppBarButton Icon="Delete" Label="Delete"/>
-                        </CommandBar>
+                        <RichEditBox Grid.Row="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="editor">
 
-
+                        </RichEditBox>
                     </Grid>
-
                     <Grid Grid.Row="0" Grid.ColumnSpan="3">
                         <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.25" Color="Black" HorizontalContentAlignment="Stretch" Margin="0,0,0,0">
                             <Grid Background="#F6F3E7" CornerRadius="20,20,20,20" Margin="0,0,0,-10">
@@ -88,74 +63,78 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
+
                                     <ColumnDefinition Width="20" />
 
                                 </Grid.ColumnDefinitions>
-
-                                <Button  Grid.Column="1" Width="20" Margin="0,0,0,0" Background="Transparent">
-                                    <Image Source="/Assets/brush.svg" Stretch="UniformToFill"/>
+                                <Button Grid.Column="1" AutomationProperties.Name="Save file" ToolTipService.ToolTip="Save file"
+                                        RelativePanel.RightOf="openFileButton" Background="#F6F3E7">
+                                    <Button.Content>
+                                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;"/>
+                                    </Button.Content>
                                 </Button>
-                                <Button Content="22" Grid.Column="2" Margin="0,0,0,0" Background="#F6F3E7">
+                                <Button Grid.Column="2" AutomationProperties.Name="Delete file" ToolTipService.ToolTip="Delete file"
+                                        RelativePanel.RightOf="deleteFileButton" Background="#F6F3E7">
+                                    <Button.Content>
+                                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74D;"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Grid.Column="3" AutomationProperties.Name="Edit file" ToolTipService.ToolTip="Edit file"
+                                        RelativePanel.RightOf="editFileButton" Background="#F6F3E7">
+                                    <Button.Content>
+                                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74D;"/>
+                                    </Button.Content>
+                                </Button>
+
+
+
+                                <Button Content="22" Grid.Column="4" Margin="0,0,0,0" Background="#F6F3E7">
                                     <Button.Transitions>
                                         <TransitionCollection>
                                             <EntranceThemeTransition></EntranceThemeTransition>
                                         </TransitionCollection>
                                     </Button.Transitions>
                                 </Button>
-                                <Button  Grid.Column="3" Background="Black" CornerRadius="180" Width="20" Height="19" HorizontalAlignment="Center" />
 
 
-                                <Button Content="H1" Grid.Column="4" Margin="0,0,0,0" Background="#F6F3E7" />
-                                <Button Content="H2" Grid.Column="5" Margin="0,0,0,0" Background="#F6F3E7" />
-                                <Button Content="H3" Grid.Column="6" Margin="0,0,0,0" Background="#F6F3E7" />
-                                <Button Content="H4" Grid.Column="7" Margin="0,0,0,0" Background="#F6F3E7" />
-                                <Button Grid.Column="8" Width="45" Margin="0,0,0,0" Background="#F6F3E7" >
-                                    <Image Source="/Assets/bold.svg" Width="15" />
+
+
+
+
+                                <Button AutomationProperties.Name="Bold" ToolTipService.ToolTip="Bold" Click="BoldButton_Click"
+                                        RelativePanel.LeftOf="italicButton" Grid.Column="5" Width="45" Margin="0,0,0,0" Background="#F6F3E7" >
+                                    <Button.Content>
+                                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8DD;"/>
+                                    </Button.Content>
                                 </Button>
-
-                                <Button Grid.Column="9" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
-                                    <Image Source="/Assets/italic.svg" Grid.Column="9" Width="15" Margin="0,0,0,0"/>
+                                <Button x:Name="italicButton" Click="ItalicButton_Click" AutomationProperties.Name="Italic" ToolTipService.ToolTip="Italic"
+                                        RelativePanel.LeftOf="fontColorButton" Grid.Column="6" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
+                                    <Button.Content>
+                                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8DB;"/>
+                                    </Button.Content>
                                 </Button>
-
-                                <Button Grid.Column="10" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
-                                    <Image Source="/Assets/underline.svg" Grid.Column="10" Width="15" Margin="0,0,0,0"/>
+                                <Button x:Name="alignrightButton" Click="AlignRightButton_Click" AutomationProperties.Name="AlignRight" ToolTipService.ToolTip="Underline"
+                                        RelativePanel.LeftOf="fontColorButton" Grid.Column="7" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
+                                    <Button.Content>
+                                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8E2;"/>
+                                    </Button.Content>
                                 </Button>
-                                <Button Grid.Column="11" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
-                                    <Image Source="/Assets/right-align.svg" Grid.Column="11" Width="15" Margin="0,0,0,0"/>
+                                <Button x:Name="alignleftButton" Click="AlignRightButton_Click" AutomationProperties.Name="AlignRight" ToolTipService.ToolTip="Underline"
+                                        RelativePanel.LeftOf="fontColorButton" Grid.Column="8" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
+                                    <Button.Content>
+                                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8E4;"/>
+                                    </Button.Content>
                                 </Button>
-                                <Button Grid.Column="12" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
-                                    <Image Source="/Assets/center-align.svg" Grid.Column="12" Width="15" Margin="0,0,0,0"/>
+                                <Button x:Name="aligncenterButton" Click="AlignRightButton_Click" AutomationProperties.Name="AlignRight" ToolTipService.ToolTip="Underline"
+                                        RelativePanel.LeftOf="fontColorButton" Grid.Column="9" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
+                                    <Button.Content>
+                                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8E3;"/>
+                                    </Button.Content>
                                 </Button>
-                                <Button Grid.Column="13" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
-                                    <Image Source="/Assets/left-align.svg" Grid.Column="13" Width="15" Margin="0,0,0,0" />
-                                </Button>
-                                <Button Grid.Column="14" Width="45" Margin="0,0,0,0" Background="#F6F3E7">
-                                    <Image Source="/Assets/justification.svg" Grid.Column="14" Width="15" Margin="0,0,0,0"/>
-                                </Button>
-
-
-
-
-
-
-
-
                             </Grid>
 
                         </control:DropShadowPanel>
-
-
-
                     </Grid>
-
-
-
-
                 </Grid>
 
 

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +23,23 @@ namespace Osumen_TheVirtualFriend
         public JournalPageCustomControl()
         {
             this.InitializeComponent();
+        }
+
+        private void BoldButton_Click(object sender, RoutedEventArgs e)
+        {
+            editor.Document.Selection.CharacterFormat.Bold = FormatEffect.Toggle;
+
+        }
+
+        private void ItalicButton_Click(object sender, RoutedEventArgs e)
+        {
+            editor.Document.Selection.CharacterFormat.Italic = FormatEffect.Toggle;
+
+        }
+
+        private void AlignRightButton_Click(object sender, RoutedEventArgs e)
+        {
+            editor.Document.Selection.ParagraphFormat.Alignment = ParagraphAlignment.Right;
         }
     }
 }
