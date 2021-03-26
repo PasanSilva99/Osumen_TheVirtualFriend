@@ -91,7 +91,7 @@ namespace Osumen_ChatKnoladgeBase
                 Console.ResetColor();
 
                 ChatAI chat = new ChatAI();
-                chat.GetPlaceHolders("Word1 *~~*#test#*~~* word2 word3 *~~*#Word4#*~~**~~*# word34#*~~*");
+                chat.FillPlaceholders("Word1 *~~*#test#*~~* word2 word3 *~~*#Word4#*~~**~~*# word34#*~~*");
 
                 Console.Write("Re run? (y/n) > ");
 
