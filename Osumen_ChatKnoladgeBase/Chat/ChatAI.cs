@@ -1,4 +1,5 @@
-﻿using Osumen_ChatKnoladgeBase.Trainer;
+﻿using Osumen_ChatKnoladgeBase.Placeholders;
+using Osumen_ChatKnoladgeBase.Trainer;
 using Osumen_TheVirtualFriendML.Model;
 using SimpleNetNlp;
 using System;
@@ -114,7 +115,7 @@ namespace Osumen_ChatKnoladgeBase.Chat
                 {
                     if (words[i].StartsWith("#") && words[i].EndsWith("#"))
                     {
-                        //words[i] = value; 
+                        var Rplaceholders = new PlaceHolderFunctions().GetRegisteredPlaceholders();
                     }
                 }
 
@@ -130,12 +131,4 @@ namespace Osumen_ChatKnoladgeBase.Chat
     }
 
 
-
-    public class PlaceHolderVar
-    {
-        public String Placeholder { get; set; }
-
-        public String ReplyString { get; set; }
-
-    }
 }
