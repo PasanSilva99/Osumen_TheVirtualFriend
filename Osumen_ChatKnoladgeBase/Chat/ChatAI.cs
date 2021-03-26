@@ -94,11 +94,12 @@ namespace Osumen_ChatKnoladgeBase.Chat
         }
 
         /// <summary>
-        /// Get placeholders if exists in any String Input
+        /// Fill the placeholders of any string
         /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public PlaceHolderVar[] GetPlaceHolders(String input)
+        /// <param name="input">The sentence</param>
+        /// <param name="PlaceHolderStartString">How the placeholder starts</param>
+        /// <param name="PlaceholderEndString">How the place holder end</param>
+        public void FillPlaceholders(String input)
         {
             var placeholders = new List<PlaceHolderVar>();
 
@@ -106,48 +107,35 @@ namespace Osumen_ChatKnoladgeBase.Chat
             {
                 // Has placeholders
                 Console.WriteLine("Fetching Placeholders");
-                String[] seperators = {"*~", "~*"}; 
+                String[] seperators = { "*~", "~*" };
                 String[] words = input.Split(seperators, StringSplitOptions.None);
 
-                for(int i = 0; i < words.Length; i++)
+                for (int i = 0; i < words.Length; i++)
                 {
-                    if(words[i].StartsWith("#") && words[i].EndsWith("#"))
+                    if (words[i].StartsWith("#") && words[i].EndsWith("#"))
                     {
-                        words[i] = "Replaced";
+                        //words[i] = value; 
                     }
                 }
 
-                foreach(var s in words)
+                foreach (var s in words)
                 {
                     Console.Write(s);
                 }
 
                 Console.WriteLine();
-
-
             }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Fill the placeholders of any string
-        /// </summary>
-        /// <param name="input">The sentence</param>
-        /// <param name="PlaceHolderStartString">How the placeholder starts</param>
-        /// <param name="PlaceholderEndString">How the place holder end</param>
-        /// <returns></returns>
-        public String FillPlaceholders(String input)
-        {
-            return null;
         }
 
     }
 
+
+
     public class PlaceHolderVar
     {
-        public String Text { get; set; }
-        public int Start { get; set; }
-        public int Last { get; set; }
+        public String Placeholder { get; set; }
+
+        public String ReplyString { get; set; }
+
     }
 }
