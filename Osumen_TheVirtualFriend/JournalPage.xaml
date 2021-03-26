@@ -30,6 +30,7 @@
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="10" />
@@ -38,19 +39,13 @@
 
                             </Grid.ColumnDefinitions>
 
-                            <control:DropShadowPanel Margin="10,10,10,10" Grid.Column="1" Grid.Row="1" BlurRadius="30.0" ShadowOpacity="0.1" OffsetX="0.0" OffsetY="0.0" Color="Black" VerticalAlignment="Top">
-                                <Button Background="{StaticResource NavigationItemBackground}"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" >
-                                    <Image Source="/Assets/pictures.svg" Margin="10,10,10,10" />
-                                </Button>
-                            </control:DropShadowPanel>
-
-                            <control:DropShadowPanel Margin="10,10,10,10" Grid.Column="1" Grid.Row="2" BlurRadius="30" ShadowOpacity="0.1" Color="Black" VerticalAlignment="Top">
-                                <Button Background="{StaticResource NavigationItemBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" >
-                                    <Image Source="/Assets/happy.svg" Margin="10,10,10,10" ></Image>
+                            <control:DropShadowPanel Margin="10,10,10,10" Grid.Column="1" Grid.Row="2" BlurRadius="30.0" ShadowOpacity="0.1" OffsetX="0.0" OffsetY="0.0" Color="Black" VerticalAlignment="Top">
+                                <Button Background="{StaticResource NavigationItemBackground}"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" x:Name="pictureLoader" Click="Picture_Loader">
+                                    <Image Source="/Assets/pictures.png" Margin="10,10,10,10" />
                                 </Button>
                             </control:DropShadowPanel>
                             <control:DropShadowPanel Margin="10,10,10,10" Grid.Column="1" Grid.Row="3" BlurRadius="30" ShadowOpacity="0.1" Color="Black" VerticalAlignment="Top">
-                                <Button Background="{StaticResource NavigationItemBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" >
+                                <Button Background="{StaticResource NavigationItemBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="180,180,180,180" x:Name="videoLoader" Click="Video_Loader" >
                                     <Image Source="/Assets/play-button.png"  Margin="10,10,10,10" />
                                 </Button>
                             </control:DropShadowPanel>
