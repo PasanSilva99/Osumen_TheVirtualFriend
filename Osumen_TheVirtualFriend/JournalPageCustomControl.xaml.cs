@@ -5,6 +5,9 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
 using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -20,6 +23,9 @@ namespace Osumen_TheVirtualFriend
 {
     public sealed partial class JournalPageCustomControl : UserControl
     {
+        private IRandomAccessStream fileStream;
+        private string jpg;
+
         public JournalPageCustomControl()
         {
             this.InitializeComponent();
@@ -41,5 +47,80 @@ namespace Osumen_TheVirtualFriend
         {
             editor.Document.Selection.ParagraphFormat.Alignment = ParagraphAlignment.Right;
         }
+
+        private void AlignLeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            editor.Document.Selection.ParagraphFormat.Alignment = ParagraphAlignment.Left;
+        }
+        private void AlignCenterButton_Click(object sender, RoutedEventArgs e)
+        {
+            editor.Document.Selection.ParagraphFormat.Alignment = ParagraphAlignment.Center;
+        }
+
+        private async void Picture_Loader(object sender, RoutedEventArgs e)
+        {
+        //    await SetLocalMedia();
+        //}
+        //async private System.Threading.Tasks.Task SetLocalMedia()
+        //{
+        //    //var openPicker = new FileOpenPicker();
+
+        //    //openPicker.FileTypeFilter.Add(".png");
+        //    //openPicker.FileTypeFilter.Add(".jpg");
+
+        //    //var file = await openPicker.PickSingleFileAsync();
+
+            
+        //    //if (file != null)
+        //    //{
+        //    //    var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+        //    //    editor.Document.Selection.InsertImage(64, 64, 0, VerticalCharacterAlignment.Baseline, "img", fileStream);
+        //    //}
+        }
+
+        private async void Video_Loader(object sender, RoutedEventArgs e)
+        {
+            // Open a image file.
+            Windows.Storage.Pickers.FileOpenPicker open =
+                new Windows.Storage.Pickers.FileOpenPicker();
+            open.SuggestedStartLocation =
+                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+            open.FileTypeFilter.Add(".mp4");
+
+            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
+
+            if (file != null)
+            {
+                using (Windows.Storage.Streams.IRandomAccessStream randAccStream =
+                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+                {
+                    // Load the file into the Document property of the RichEditBox.
+                    editor.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+                }
+            }
+        }
+
+        private async void VoiceRecord_Loader(object sender, RoutedEventArgs e)
+        {
+            // Open a mp3 file.
+            Windows.Storage.Pickers.FileOpenPicker open =
+                new Windows.Storage.Pickers.FileOpenPicker();
+            open.SuggestedStartLocation =
+                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+            open.FileTypeFilter.Add(".mp3");
+
+            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
+
+            if (file != null)
+            {
+                using (Windows.Storage.Streams.IRandomAccessStream randAccStream =
+                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+                {
+                    // Load the file into the Document property of the RichEditBox.
+                    editor.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+                }
+            }
+        }
+
     }
 }
