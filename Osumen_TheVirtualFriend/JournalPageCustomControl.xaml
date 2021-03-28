@@ -247,11 +247,6 @@
                 </Button>
             </control:DropShadowPanel>
 
-
-
-
         </Grid>
     </Grid>
-
-
 </UserControl>
