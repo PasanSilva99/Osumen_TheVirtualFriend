@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Osumen_TheVirtualFriendML.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Osumen_TheVirtualFriendML.ConsoleApp", "Osumen_TheVirtualFriendML.ConsoleApp\Osumen_TheVirtualFriendML.ConsoleApp.csproj", "{D0896E9B-021C-4C4A-9189-B9A75AB8C5D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClassLibrary", "ChatClassLibrary\ChatClassLibrary.csproj", "{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,26 +111,6 @@ Global
 		{D0896E9B-021C-4C4A-9189-B9A75AB8C5D0}.Release|x64.Build.0 = Release|Any CPU
 		{D0896E9B-021C-4C4A-9189-B9A75AB8C5D0}.Release|x86.ActiveCfg = Release|Any CPU
 		{D0896E9B-021C-4C4A-9189-B9A75AB8C5D0}.Release|x86.Build.0 = Release|Any CPU
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|ARM.ActiveCfg = Debug|ARM
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|ARM.Build.0 = Debug|ARM
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|ARM64.Build.0 = Debug|ARM64
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|x64.ActiveCfg = Debug|x64
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|x64.Build.0 = Debug|x64
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|x86.ActiveCfg = Debug|x86
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Debug|x86.Build.0 = Debug|x86
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|ARM.ActiveCfg = Release|ARM
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|ARM.Build.0 = Release|ARM
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|ARM64.ActiveCfg = Release|ARM64
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|ARM64.Build.0 = Release|ARM64
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|x64.ActiveCfg = Release|x64
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|x64.Build.0 = Release|x64
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|x86.ActiveCfg = Release|x86
-		{A9D3DD50-D875-4167-AEA9-4A21E11F0CF9}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

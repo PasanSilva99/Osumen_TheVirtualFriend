@@ -36,7 +36,9 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
-                        <Frame x:Name="ChatControlLoader"/>
+                        <ScrollViewer>
+                            <StackPanel x:Name="ChatControlLoader" Spacing="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </ScrollViewer>
                     </Grid>
 
                     <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Text="Lets Chat..." HorizontalAlignment="Left" VerticalAlignment="Center"/>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StandeedAIBot;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,14 @@ namespace Osumen_TheVirtualFriend
         public ChatControl()
         {
             this.InitializeComponent();
+        }
+
+        public void TestRuns()
+        {
+            ChatBubble chatBubble = new ChatBubble()
+            {
+                Message = "Test"
+            };
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using Osumen_ChatKnoladgeBase.Placeholders;
+﻿using edu.stanford.nlp.simple;
+using Osumen_ChatKnoladgeBase.Placeholders;
 using Osumen_ChatKnoladgeBase.Trainer;
 using Osumen_TheVirtualFriendML.Model;
-using SimpleNetNlp;
 using System;
 using System.Collections.Generic;
 using System.Linq;

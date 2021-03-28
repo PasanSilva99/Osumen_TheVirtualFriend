@@ -26,5 +26,10 @@ namespace Osumen_TheVirtualFriend
         {
             this.InitializeComponent();
         }
+
+        public void TestRuns()
+        {
+
+        }
     }
 }

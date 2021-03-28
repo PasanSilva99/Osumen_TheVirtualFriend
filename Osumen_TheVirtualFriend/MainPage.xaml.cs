@@ -1,4 +1,4 @@
-﻿using Osumen_TheVirtualFriend.ChatKnoladgeBase.Model;
+﻿using Osumen_ChatKnoladgeBase.Trainer;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,9 +27,7 @@ namespace Osumen_TheVirtualFriend
         {
             this.InitializeComponent();
 
-           // PageLoader.Navigate(typeof(HomePage));
-            ModelHandler handler = new ModelHandler();
-            var inte = handler.PrepareTrainDataAsync();
+            PageLoader.Navigate(typeof(HomePage));
 
         }
         

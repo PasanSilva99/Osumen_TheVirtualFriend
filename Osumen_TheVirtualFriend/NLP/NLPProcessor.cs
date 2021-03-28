@@ -1,9 +1,10 @@
-﻿using System;
+﻿using edu.stanford.nlp.simple;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SimpleNetNlp;
+using java.util;
 
 namespace Osumen_ChatKnoladgeBase
 {
@@ -50,41 +51,60 @@ namespace Osumen_ChatKnoladgeBase
             // Check Wether the Sentence is Not Null
             if (!Sentence.Equals(null))
             {
-                // Lemmatization
-                var lemmas = Sentence.Lemmas;
+                //// Lemmatization
+                //var lemmas = Sentence.lemmas().toArray();
 
-                // Re build the sentece using Lemmatized Words
-                var LemmatizedSentBuilder = new StringBuilder();
+                //// Re build the sentece using Lemmatized Words
+                //var LemmatizedSentBuilder = new StringBuilder();
 
-                foreach (String word in lemmas)
+                //foreach (String word in lemmas)
+                //{
+                //    LemmatizedSentBuilder.Append(word + " ");
+                //}
+
+                //var LemmatizedSentence = new Sentence(LemmatizedSentBuilder.ToString());
+
+                //// POS Tagging
+                //var posTags = LemmatizedSentence.posTags();
+
+                //// Analyze the Sentiment
+                // var sentiment = Sentence.sentiment();
+
+                //// NER Tagging
+                //var nerTags = LemmatizedSentence.nerTags();
+
+                //// Appened the processed Sentence in to word List
+
+                //for (int i = 0; i < lemmas.Length; i++)
+                //{
+                //    Words.Add(new Word
+                //    {
+                //        Lemma = lemmas[i].ToString(),
+                //        Original = Sentence.words().toArray()[i].ToString(),
+                //        PosTag = posTags.toArray()[i].ToString(),
+                //        Ner = nerTags.toArray()[i].ToString(),
+                //    }) ;
+                //}
+
+                var tokensJava = Sentence.tokens();
+
+                List<Token> tokens = new List<Token>();
+
+                for (int i = 0; i < tokensJava.size(); i++)
                 {
-                    LemmatizedSentBuilder.Append(word + " ");
+                    tokens.Add(tokensJava.get(i) as Token);
                 }
 
-                var LemmatizedSentence = new Sentence(LemmatizedSentBuilder.ToString());
-
-                // POS Tagging
-                var posTags = LemmatizedSentence.PosTags;
-
-                // Analyze the Sentiment
-                 var sentiment = Sentence.Sentiment;
-
-                // NER Tagging
-                var nerTags = LemmatizedSentence.NerTags;
-
-                // Appened the processed Sentence in to word List
-
-                for (int i = 0; i < lemmas.Count; i++)
+                foreach(var word in tokens)
                 {
-                    Words.Add(new Word
+                    Words.Add(new Word()
                     {
-                        Lemma = lemmas.ToArray()[i],
-                        Original = Sentence.Words.ToArray()[i],
-                        PosTag = posTags.ToArray()[i],
-                        Ner = nerTags.ToArray()[i],
-                    });
+                        Lemma = word.lemma(),
+                        Original = word.word(),
+                        PosTag = word.posTag(),
+                        Ner = word.ner()
+                    }) ;
                 }
-
             }
 
             return Words.ToArray();
