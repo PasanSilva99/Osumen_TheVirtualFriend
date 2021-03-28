@@ -26,5 +26,42 @@ namespace Osumen_TheVirtualFriend
         {
             this.InitializeComponent();
         }
+
+        private void LoadSearch(object sender, RoutedEventArgs e)
+        {
+            grid_tip.Visibility = Visibility.Collapsed;
+            grid_search.Visibility = Visibility.Visible;
+            SearchFunc(text_Search.Text.Equals("")?"Remedies for common ailments":text_Search.Text);
+           
+            
+        }
+
+        public void SearchFunc(String SearchString)
+        {
+            
+            webView1.Navigate(new Uri("https://www.google.com?q=" + SearchString));
+
+            
+        }
+
+        private void scrl_search_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+
+        }
+
+        private void WebView_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
+        {
+            
+        }
+
+        private void WebView_NavigationFailed(object sender, WebViewNavigationFailedEventArgs e)
+        {
+            
+        }
+
+        private void WebView_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+           
+        }
     }
 }
