@@ -104,7 +104,7 @@
                             <TextBlock Style="{ThemeResource TitleTextBlockStyle}"
                    Grid.Row="1"
                    Text="Title:" FontSize="14" FontFamily="Yu Gothic UI Semibold"  Margin="10,15,15,8"/>
-                            <RichEditBox Grid.Row="2" x:Name="txtbox_Title" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <RichEditBox Grid.Row="2" x:Name="richtxtbox_Title" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
                             </RichEditBox>
                             <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}"
