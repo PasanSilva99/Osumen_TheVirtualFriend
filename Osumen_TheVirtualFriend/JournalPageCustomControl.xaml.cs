@@ -15,7 +15,10 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+
+
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -58,46 +61,58 @@ namespace Osumen_TheVirtualFriend
 
         private async void Picture_Loader(object sender, RoutedEventArgs e)
         {
-        //    await SetLocalMedia();
-        //}
-        //async private System.Threading.Tasks.Task SetLocalMedia()
-        //{
-        //    //var openPicker = new FileOpenPicker();
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.ViewMode = PickerViewMode.Thumbnail;
+            openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            openPicker.FileTypeFilter.Add(".jpg");
+            openPicker.FileTypeFilter.Add(".png");
 
-            //    //openPicker.FileTypeFilter.Add(".png");
-            //    //openPicker.FileTypeFilter.Add(".jpg");
-
-            //    //var file = await openPicker.PickSingleFileAsync();
-
-
-            //    //if (file != null)
-            //    //{
-            //    //    var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-            //    //    editor.Document.Selection.InsertImage(64, 64, 0, VerticalCharacterAlignment.Baseline, "img", fileStream);
-            //    //}
-        
-        }
-        //public void {}
-
-    private async void Video_Loader(object sender, RoutedEventArgs e)
-        {
-            // Open a image file.
-            Windows.Storage.Pickers.FileOpenPicker open =
-                new Windows.Storage.Pickers.FileOpenPicker();
-            open.SuggestedStartLocation =
-                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
-            open.FileTypeFilter.Add(".mp4");
-
-            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
+            StorageFile file = await openPicker.PickSingleFileAsync();
 
             if (file != null)
             {
-                using (Windows.Storage.Streams.IRandomAccessStream randAccStream =
-                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+                using (IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+
                 {
-                    // Load the file into the Document property of the RichEditBox.
-                    editor.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+
+                    editor.Document.Selection.InsertImage(250, 250, 0, VerticalCharacterAlignment.Baseline, "img", fileStream);
+
                 }
+
+            }
+            else
+            {
+                //  
+            }
+
+
+        }
+
+
+        private async void Video_Loader(object sender, RoutedEventArgs e)
+        {
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.ViewMode = PickerViewMode.Thumbnail;
+            openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            openPicker.FileTypeFilter.Add(".mp4");
+            openPicker.FileTypeFilter.Add(".wvw");
+
+            StorageFile vidfile = await openPicker.PickSingleFileAsync();
+
+            if (vidfile != null)
+            {
+                using (IRandomAccessStream fileStream = await vidfile.OpenAsync(Windows.Storage.FileAccessMode.Read))
+
+                {
+
+                    editor.Document.Selection.InsertImage(250, 250, 0, VerticalCharacterAlignment.Baseline, "img", fileStream);
+
+                }
+
+            }
+            else
+            {
+                //  
             }
         }
 
@@ -122,6 +137,8 @@ namespace Osumen_TheVirtualFriend
                 }
             }
         }
+
+       
 
     }
 }
