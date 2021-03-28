@@ -8,13 +8,74 @@
     xmlns:control ="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     d:DesignHeight="800"
-    d:DesignWidth="800">
+    d:DesignWidth="1100">
     <Grid Background="Transparent">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="0.30*" />
+            
         </Grid.ColumnDefinitions>
         <Grid Margin="10,10,10,10" Grid.Column="0">
+            <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
+                <Grid Padding="5" Background="#ffffff" CornerRadius="20,20,20,20">
+                    <Grid Background="#FFFFFF">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5" />
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="10" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Content="Add New Entry +" Grid.Column="1" Margin="0,20,0,0" Grid.Row="6" VerticalAlignment="Stretch" Width="320" HorizontalAlignment="Center" CornerRadius="20,20,20,20">
+
+                        </Button>
+                        <Grid Grid.Row="1" Grid.Column="1">
+
+                            <Grid Background="#ffffff"  BorderBrush="gray" BorderThickness="0.5" Grid.ColumnSpan="2" Margin="1,1,1,1" CornerRadius="20,20,20,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="80"/>
+
+                                </Grid.ColumnDefinitions>
+                                <TextBox Grid.Column="0" PlaceholderText="Search" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,0,0,20" BorderBrush="Transparent" BorderThickness="0" Padding="10,5,0,0"/>
+                                <Image Source="Assets/search.png" Width="30" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+
+                            </Grid>
+
+                        </Grid>
+                        <ScrollViewer Grid.RowSpan="4" Grid.Row="2" Grid.Column="0">
+                            <StackPanel x:Name="stackpaneladdentry">
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ScrollViewer>
+
+                    </Grid>
+
+                </Grid>
+
+            </control:DropShadowPanel>
+
+        </Grid>
+        <Grid Margin="10,10,10,10" Grid.Column="1">
             <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
                 <Grid Margin="0,0,0,0" Background="White" CornerRadius="20,20,20,20">
                     <Grid Background="#F6F3E7">
@@ -152,7 +213,7 @@
 
 
         </Grid>
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="111*" />
                 <RowDefinition Height="111*" />

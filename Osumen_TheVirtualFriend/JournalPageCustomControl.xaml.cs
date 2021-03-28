@@ -23,8 +23,7 @@ namespace Osumen_TheVirtualFriend
 {
     public sealed partial class JournalPageCustomControl : UserControl
     {
-        private IRandomAccessStream fileStream;
-        private string jpg;
+        
 
         public JournalPageCustomControl()
         {
@@ -65,20 +64,22 @@ namespace Osumen_TheVirtualFriend
         //{
         //    //var openPicker = new FileOpenPicker();
 
-        //    //openPicker.FileTypeFilter.Add(".png");
-        //    //openPicker.FileTypeFilter.Add(".jpg");
+            //    //openPicker.FileTypeFilter.Add(".png");
+            //    //openPicker.FileTypeFilter.Add(".jpg");
 
-        //    //var file = await openPicker.PickSingleFileAsync();
+            //    //var file = await openPicker.PickSingleFileAsync();
 
-            
-        //    //if (file != null)
-        //    //{
-        //    //    var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-        //    //    editor.Document.Selection.InsertImage(64, 64, 0, VerticalCharacterAlignment.Baseline, "img", fileStream);
-        //    //}
+
+            //    //if (file != null)
+            //    //{
+            //    //    var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+            //    //    editor.Document.Selection.InsertImage(64, 64, 0, VerticalCharacterAlignment.Baseline, "img", fileStream);
+            //    //}
+        
         }
+        //public void {}
 
-        private async void Video_Loader(object sender, RoutedEventArgs e)
+    private async void Video_Loader(object sender, RoutedEventArgs e)
         {
             // Open a image file.
             Windows.Storage.Pickers.FileOpenPicker open =

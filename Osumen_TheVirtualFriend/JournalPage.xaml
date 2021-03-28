@@ -15,12 +15,8 @@
             <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
                 <Grid Padding="0,0,0,0" Background="#ffffff" CornerRadius="20,20,20,20" Grid.RowSpan="6">
                     <Grid Background="#FFFFFF">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="1.5*" />
-                            
-                        </Grid.ColumnDefinitions>
-                        <local:JournalBackPanelSmallCustomControl  Margin="-10,-10,0,-10" Grid.Column="0"/>
+                        
+                        
                         <local:JournalPageCustomControl Grid.Column="1" Margin="10,10,10,10"/>
                         
 
