@@ -4,69 +4,145 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.ML;
+using Microsoft.ML.Data;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
-using Windows.Storage;
 
-namespace Osumen_TheVirtualFriend.ChatKnoladgeBase.Model
+namespace Osumen_ChatKnoladgeBase.Trainer
 {
-    public class Intent
+    public class ModelHandler
     {
-        public String TAG { get; set; }
-        public String[] Patterns { get; set; }
-        public String[] Responces { get; set; }
-    }
-
-    public class IntentsForTraining
-    {
-        public String TAG { get; set; }
-        public String Pattern { get; set; }
-    }
-
-
-    class ModelHandler
-    {
-        // To save the Intents that read from the file.
-        Intent[] intents;
-
-        // To save the Intents that are ready for the model
-        IntentsForTraining[] intentsForTraining;
-
-        public void PrepareIntentsFile()
+        public class Intent
         {
-            
+            public String Tag { get; set; }
+            public String[] Patterns { get; set; }
+            public String[] Responses { get; set; }
         }
 
-        public async Task<IntentsForTraining[]> PrepareTrainDataAsync()
+        Intent[] trainintents = null;
+
+        public class IntentTrainingDataTAG
         {
- 
-                // ITD = I { T, Pn }
+            [LoadColumn(0)]
+            [ColumnName("Label")]
+            public String Tag { get; set; }
+            [LoadColumn(1)]
+            public String Pattern { get; set; }
+        }
 
-                // Read the data from the existing file
-                StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
-                    StorageFile sampleFile =
-                         await storageFolder.GetFileAsync("intents.json");
-                    string jsonString = await FileIO.ReadTextAsync(sampleFile);
+        List<Intent> _intents = new List<Intent>();
 
-                    intents = JsonConvert.DeserializeObject<Intent[]>(jsonString); // This holdts all the intents that read from the file. With all properties
+        public void saveModel()
+        {
+            using (StreamWriter file = File.CreateText(@"D:\intents.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, _intents);
+            }
+        }
 
-                    // To train the model, We have to Siplyfy the Data
-                    List<IntentsForTraining> ListIFT = new List<IntentsForTraining>();
+        public Intent[] ReadTrainData()
+        {
+            Console.WriteLine("##########################################");
+            Console.WriteLine("              Reading File ");
+            var jsonString = File.ReadAllText(@"D:\intents.json");
+            trainintents = JsonConvert.DeserializeObject<Intent[]>(jsonString);
 
-                    for (int i = 0; i < intents.Length; i++)
+            Console.WriteLine("Ser");
+            foreach (var s in trainintents)
+            {
+                Console.WriteLine(s.Tag);
+            }
+            Console.WriteLine("##########################################");
+
+            return trainintents;
+
+        }
+
+        
+
+        public void TrainModel()
+        {
+            MLContext mLContext = new MLContext();
+
+            TextLoader textLoader = mLContext.Data.CreateTextLoader<IntentTrainingDataTAG>(separatorChar: ',', hasHeader: false);
+
+            IDataView data = textLoader.Load(@"D:\intentStr.txt");
+
+        }
+
+        public Intent FindIntent(String tag, Intent[] intent)
+        {
+            Console.WriteLine("Searching Tag : " + tag);
+
+            foreach(var i in intent)
+            {
+                Console.WriteLine("Tag: " + i.Tag.ToLower() + "?,");
+
+                if(i.Tag.ToLower() == tag.ToLower())
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+
+        public IntentTrainingDataTAG[] fitDataAsTagPattern()
+        {
+            Console.WriteLine("+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+");
+            Console.WriteLine("                Loading Chat Model\n");
+
+            List<IntentTrainingDataTAG> intentTrainingDataTAGs = new List<IntentTrainingDataTAG>();
+
+            foreach(var I in trainintents)
+            {
+                Console.Write("{ " + I.Tag + ", (");
+                for(int i = 0; i < I.Patterns.Length; i++)
+                {
+                    Console.Write(I.Patterns[i] + ", ");
+                    intentTrainingDataTAGs.Add(new IntentTrainingDataTAG
                     {
-                        foreach (var pattern in intents[i].Patterns)
-                        {
-                            ListIFT.Add(new IntentsForTraining() { TAG = intents[i].TAG, Pattern = intents[i].Patterns[i] });
-                        }
-                    }
+                        Tag = I.Tag,
+                        Pattern = I.Patterns[i]
+                    });
+                }
+                Console.Write(" )}");
+                Console.WriteLine();
+            }
 
-            return ListIFT.ToArray();
+            Console.WriteLine("\n             Done Chat Model Loading ");
+            Console.WriteLine("+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+");
+
+            return intentTrainingDataTAGs.ToArray();
+
         }
 
-        public ModelHandler()
+        public void SelializeTrainingTAG(IntentTrainingDataTAG[] ts)
         {
+            Console.WriteLine("=============================================");
+            Console.WriteLine("             Serializing Tags\n");
 
+            using (StreamWriter file = File.CreateText(@"D:\TrainingData.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, ts);
+            }
+
+            Console.WriteLine("\n               Done Serializing");
+            Console.WriteLine("=============================================");
+
+        }
+
+        public void CraeteCSV(IntentTrainingDataTAG[] tr)
+        {
+            List<String> intentsStr = new List<String>();
+
+            foreach(var inte in tr)
+            {
+                intentsStr.Add(inte.Tag + "," + inte.Pattern + "\n");
+            }
+
+            File.WriteAllLines(@"D:\intentStr.txt", intentsStr);
         }
 
     }

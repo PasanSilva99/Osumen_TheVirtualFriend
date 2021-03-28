@@ -125,7 +125,6 @@
     <Compile Include="ChatControl.xaml.cs">
       <DependentUpon>ChatControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Chat\Model\ModelHandler.cs" />
     <Compile Include="FirebaseOp.cs" />
     <Compile Include="GreetingWidgetControl.xaml.cs">
       <DependentUpon>GreetingWidgetControl.xaml</DependentUpon>
