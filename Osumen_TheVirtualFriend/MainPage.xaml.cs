@@ -26,9 +26,11 @@ namespace Osumen_TheVirtualFriend
         public MainPage()
         {
             this.InitializeComponent();
+
            // PageLoader.Navigate(typeof(HomePage));
             ModelHandler handler = new ModelHandler();
             var inte = handler.PrepareTrainDataAsync();
+
         }
         
     }

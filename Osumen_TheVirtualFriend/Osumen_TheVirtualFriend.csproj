@@ -182,6 +182,11 @@
     <Content Include="Assets\987837452c4b4fc1387635ce1e04933c.jpg" />
     <Content Include="Assets\diary.png" />
     <Content Include="Assets\house.png" />
+    <Content Include="Assets\microphone.png" />
+    <Content Include="Assets\pictures.png" />
+    <Content Include="Assets\pictures.svg" />
+    <Content Include="Assets\play-button.png" />
+    <Content Include="Assets\play-button.svg" />
     <Content Include="Assets\reminders.png" />
     <Content Include="Assets\send %281%29.png" />
     <Content Include="Assets\send.png" />

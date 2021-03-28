@@ -26,5 +26,76 @@ namespace Osumen_TheVirtualFriend
         {
             this.InitializeComponent();
         }
+
+        private async void Picture_Loader(object sender, RoutedEventArgs e)
+        {
+
+            // Open a image file.
+            Windows.Storage.Pickers.FileOpenPicker open =
+                new Windows.Storage.Pickers.FileOpenPicker();
+            open.SuggestedStartLocation =
+                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+            open.FileTypeFilter.Add(".png");
+
+            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
+
+            if (file != null)
+            {
+                using (Windows.Storage.Streams.IRandomAccessStream randAccStream =
+                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+                {
+                    // Load the file into the Document property of the RichEditBox.
+                  //  editor.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+                }
+            }
+
+
+
+        }
+
+        
+        private async void Video_Loader(object sender, RoutedEventArgs e)
+        {
+            // Open a image file.
+            Windows.Storage.Pickers.FileOpenPicker open =
+                new Windows.Storage.Pickers.FileOpenPicker();
+            open.SuggestedStartLocation =
+                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+            open.FileTypeFilter.Add(".mp4");
+
+            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
+
+            if (file != null)
+            {
+                using (Windows.Storage.Streams.IRandomAccessStream randAccStream =
+                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+                {
+                    // Load the file into the Document property of the RichEditBox.
+                //   editor.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+                }
+            }
+        }
+
+        private async void VoiceRecord_Loader(object sender, RoutedEventArgs e)
+        {
+            // Open a mp3 file.
+            Windows.Storage.Pickers.FileOpenPicker open =
+                new Windows.Storage.Pickers.FileOpenPicker();
+            open.SuggestedStartLocation =
+                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+            open.FileTypeFilter.Add(".mp3");
+
+            Windows.Storage.StorageFile file = await open.PickSingleFileAsync();
+
+            if (file != null)
+            {
+                using (Windows.Storage.Streams.IRandomAccessStream randAccStream =
+                    await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+                {
+                    // Load the file into the Document property of the RichEditBox.
+                    //  editor.Document.LoadFromStream(Windows.UI.Text.TextSetOptions.FormatRtf, randAccStream);
+                }
+            }
+        }
     }
 }
