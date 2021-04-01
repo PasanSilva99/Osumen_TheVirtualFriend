@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="Login_Page.SignUpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Login_Page"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".25*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height=".25*" />
+
+            </Grid.RowDefinitions>
+            <Image Source="Assets/smile.png" Grid.Row="1" HorizontalAlignment="Center" Width="300">
+
+            </Image>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".10*" />
+                <RowDefinition Height=".20*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="0.03*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="0.03*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="0.03*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="0.03*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="0.03*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="0.03*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="0.03*" />
+                <RowDefinition Height=".10*" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".1*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width=".1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Sign Up" FontSize="80" HorizontalAlignment="Center">
+
+            </TextBlock>
+            <TextBox Grid.Column="1" Grid.Row="2" PlaceholderText="Name" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,20,20,20" BorderBrush="Gray" BorderThickness="0" Padding="10,10,10,10" HorizontalAlignment="Center" Background="AliceBlue" Height="50" Width="600" />
+            <TextBox Grid.Column="1" Grid.Row="4" PlaceholderText="Email" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,20,20,20" BorderBrush="Gray" BorderThickness="0" Padding="10,10,10,10" HorizontalAlignment="Center" Background="AliceBlue" Height="50" Width="600"/>
+            <TextBox Grid.Column="1" Grid.Row="6" PlaceholderText="Password" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,20,20,20" BorderBrush="Gray" BorderThickness="0" Padding="10,10,10,10" HorizontalAlignment="Center" Background="AliceBlue" Height="50" Width="600"/>
+            <TextBox Grid.Column="1" Grid.Row="8" PlaceholderText="Confirm Password" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,20,20,20" BorderBrush="Gray" BorderThickness="0" Padding="10,10,10,10" HorizontalAlignment="Center" Background="AliceBlue" Height="50" Width="600"/>
+            <TextBox Grid.Column="1" Grid.Row="10" PlaceholderText="Date of Birth" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,20,20,20" BorderBrush="Gray" BorderThickness="0" Padding="10,10,10,10" HorizontalAlignment="Center" Background="AliceBlue" Height="50" Width="600"/>
+            <TextBox Grid.Column="1" Grid.Row="12" PlaceholderText="Address" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,20,20,20" BorderBrush="Gray" BorderThickness="0" Padding="10,10,10,10" HorizontalAlignment="Center" Background="AliceBlue" Height="50" Width="600"/>
+            <TextBox Grid.Column="1" Grid.Row="14" PlaceholderText="Telephone Number" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,20,20,20" BorderBrush="Gray" BorderThickness="0" Padding="10,10,10,10" HorizontalAlignment="Center" Background="AliceBlue" Height="50" Width="600"/>
+        </Grid>
+    </Grid>
+</Page>
