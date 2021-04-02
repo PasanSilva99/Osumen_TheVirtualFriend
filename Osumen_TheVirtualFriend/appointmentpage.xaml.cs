@@ -13,22 +13,26 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Osumen_TheVirtualFriend
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class appointmentpage : Page
     {
-        public MainPage()
+        public appointmentpage()
         {
             this.InitializeComponent();
-
-            PageLoader.Navigate(typeof(HomePage));
-
+            
         }
-        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            apptbackimage.Visibility = Visibility.Collapsed;
+            apptdatagrid.Visibility = Visibility.Visible;
+            searchbackimage.Visibility = Visibility.Visible;
+        }
     }
 }

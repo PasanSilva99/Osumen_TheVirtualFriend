@@ -1,0 +1,74 @@
+﻿<UserControl
+    x:Class="Osumen_TheVirtualFriend.JournalBackPanelSmallCustomControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Osumen_TheVirtualFriend"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:control ="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="700"
+    d:DesignWidth="400">
+
+    <Grid Margin="10,10,10,10">
+        <control:DropShadowPanel BlurRadius="50" ShadowOpacity="0.3" Color="Black" HorizontalContentAlignment="Stretch">
+            <Grid Padding="5" Background="#ffffff" CornerRadius="20,20,20,20">
+                <Grid Background="#FFFFFF">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="10" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Content="Add New Entry +" Grid.Column="1" Margin="0,20,0,0" Grid.Row="6" VerticalAlignment="Stretch" Width="320" HorizontalAlignment="Center" CornerRadius="20,20,20,20" x:Name="addentry" Click="addentry_Click">
+
+                    </Button>
+                    <Grid Grid.Row="1" Grid.Column="1">
+
+                        <Grid Background="#ffffff"  BorderBrush="gray" BorderThickness="0.5" Grid.ColumnSpan="2" Margin="1,1,1,1" CornerRadius="20,20,20,20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="80"/>
+
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" PlaceholderText="Search" TextWrapping="Wrap" Margin="2,2,-10,2" CornerRadius="20,0,0,20" BorderBrush="Transparent" BorderThickness="0" Padding="10,5,0,0"/>
+                            <Image Source="Assets/search.png" Width="30" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+
+                        </Grid>
+
+                    </Grid>
+                    <ScrollViewer Grid.RowSpan="4" Grid.Row="2" Grid.Column="0">
+                        <StackPanel x:Name="stackpaneladdentry">
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                            <local:JournalEntryCustomControl Grid.Column="1"  Margin="0,0,0,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                </Grid>
+
+            </Grid>
+
+        </control:DropShadowPanel>
+
+    </Grid>
+
+
+</UserControl>

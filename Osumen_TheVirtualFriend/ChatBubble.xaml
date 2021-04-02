@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="StandeedAIBot.ChatBubble"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StandeedAIBot"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="62.5"
+    Width="400">
+
+    <Grid x:Name="Grid_base">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border x:Name="img_profile" Grid.Column="0" Margin="10,10,10,10" VerticalAlignment="Top" Background="{ThemeResource ButtonBackgroundThemeBrush}" CornerRadius="180,180,180,180">
+            <Image Source="Assets/diamond.png" Margin="5,5,5,5"/>
+
+        </Border>
+
+        <Border x:Name="border_filler" Grid.Column="1" VerticalAlignment="Stretch">
+            <Polygon x:Name="poly_filler" Fill="{ThemeResource ButtonBackgroundThemeBrush}"  StrokeThickness="1" VerticalAlignment="Top" Margin="0,20,0,0" Points="0,0,10,00,10,8"/>
+            <!--Points="0,0,10,00,10,8"-->
+        </Border>
+
+        <Border x:Name="border_message" Background="{ThemeResource ButtonBackgroundThemeBrush}" Grid.Column="2" Margin="0,20,0,0" CornerRadius="0,10,10,10" Padding="5,5,5,10">
+            <TextBlock x:Name="tb_Message" Text="Your Message" Foreground="{ThemeResource ButtonForegroundThemeBrush}" TextWrapping="Wrap" MaxWidth="330" Padding="20,0,20,0"/>
+        </Border>
+
+    </Grid>
+</UserControl>

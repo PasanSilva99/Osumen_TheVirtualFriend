@@ -11,7 +11,7 @@
     <AssemblyName>Osumen_TheVirtualFriend</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -119,11 +119,57 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChatBubble.xaml.cs">
+      <DependentUpon>ChatBubble.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChatControl.xaml.cs">
+      <DependentUpon>ChatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FirebaseOp.cs" />
+    <Compile Include="GreetingWidgetControl.xaml.cs">
+      <DependentUpon>GreetingWidgetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="appointmentpage.xaml.cs">
+      <DependentUpon>appointmentpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalBackPanelBigCustomControl.xaml.cs">
+      <DependentUpon>JournalBackPanelBigCustomControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalBackPanelSmallCustomControl.xaml.cs">
+      <DependentUpon>JournalBackPanelSmallCustomControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalEntryCustomControl.xaml.cs">
+      <DependentUpon>JournalEntryCustomControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalPage.xaml.cs">
+      <DependentUpon>JournalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalPageCustomControl.xaml.cs">
+      <DependentUpon>JournalPageCustomControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NewDB.cs" />
+    <Compile Include="NavigationControl.xaml.cs">
+      <DependentUpon>NavigationControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemindersWidgetControl.xaml.cs">
+      <DependentUpon>RemindersWidgetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TasksWidgetControl.xaml.cs">
+      <DependentUpon>TasksWidgetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="medihelp.xaml.cs">
+      <DependentUpon>medihelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReminderUiMain.xaml.cs">
       <DependentUpon>ReminderUiMain.xaml</DependentUpon>
     </Compile>
@@ -141,13 +187,32 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\987837452c4b4fc1387635ce1e04933c.jpg" />
+    <Content Include="Assets\diary.png" />
+    <Content Include="Assets\house.png" />
+    <Content Include="Assets\microphone.png" />
+    <Content Include="Assets\pictures.png" />
+    <Content Include="Assets\pictures.svg" />
+    <Content Include="Assets\play-button.png" />
+    <Content Include="Assets\play-button.svg" />
+    <Content Include="Assets\reminders.png" />
+    <Content Include="Assets\search.png" />
+    <Content Include="Assets\send %281%29.png" />
+    <Content Include="Assets\send.png" />
+    <Content Include="Assets\to-do-list.png" />
+    <Content Include="Assets\webcam.png" />
+    <Content Include="Assets\Cry.png" />
+    <Content Include="Assets\exited.png" />
+    <Content Include="Assets\meh.png" />
+    <Content Include="Assets\sad.png" />
+    <Content Include="Assets\smile.png" />
+    <Content Include="Assets\SplashBackground.png" />
+    <Content Include="Assets\apointment.png" />
     <Content Include="Assets\calendar.png" />
-    <Content Include="Assets\delete.png" />
-    <Content Include="Assets\Plus.png" />
-    <Content Include="Assets\Reminder.png" />
-    <Content Include="Assets\selection.png" />
-    <Content Include="Assets\tasks.png" />
-    <Content Include="Assets\Watch.png" />
+    <Content Include="Assets\Doctor.png" />
+    <Content Include="Assets\Doctor.svg" />
+    <Content Include="Assets\magnifying-glass.png" />
+    <Content Include="Assets\magnifying-glass.svg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -162,9 +227,69 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ChatBubble.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChatControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GreetingWidgetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="appointmentpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JournalBackPanelBigCustomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JournalBackPanelSmallCustomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JournalEntryCustomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JournalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JournalPageCustomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NavigationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemindersWidgetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TasksWidgetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="medihelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ReminderUiMain.xaml">
       <SubType>Designer</SubType>
@@ -180,6 +305,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Google.Cloud.Storage.V1">
+      <Version>3.4.0</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Data.Sqlite">
       <Version>5.0.4</Version>
     </PackageReference>
@@ -190,10 +318,31 @@
       <Version>7.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
-      <Version>7.0.1</Version>
+      <Version>7.0.0</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.5.0</Version>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="SimpleNetNlp">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="SimpleNetNlp.Models.Ner">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="SimpleNetNlp.Models.Parser">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="SimpleNetNlp.Models.PosTagger">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="SimpleNetNlp.Models.Sentiment">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Stanford.NLP.CoreNLP">
+      <Version>4.2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>5.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

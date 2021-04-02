@@ -13,7 +13,7 @@
                         BackgroundSource="HostBackdrop"
                         TintColor="#FFFFFF"
                         TintOpacity="0.9"
-                        TintLuminosityOpacity="0.6"
+                        TintLuminosityOpacity="0.9"
                         FallbackColor="#FFFFFF" />
 
                     <AcrylicBrush x:Key="NavigationBackground"
@@ -46,7 +46,7 @@
                         BackgroundSource="Backdrop"
                         TintColor="#FBFBFB"
                         TintOpacity="0.9"
-                        TintLuminosityOpacity="0.6"
+                        TintLuminosityOpacity="0.9"
                         FallbackColor="#FBFBFB" />
 
                     <SolidColorBrush x:Key="TextNormal" Color="#000000"/>
