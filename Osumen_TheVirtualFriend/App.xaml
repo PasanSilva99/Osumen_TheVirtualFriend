@@ -63,6 +63,8 @@
 
                     <SolidColorBrush x:Key="TextInvert" Color="#FFFFFF"/>
 
+                    <SolidColorBrush x:Key="ReminderTextBox" Color="#787878"/>
+
 
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
@@ -76,7 +78,7 @@
                         FallbackColor="#19002D" />
 
                     <AcrylicBrush x:Key="NavigationBackground"
-                        BackgroundSource="Backdrop"
+                        BackgroundSource="HostBackdrop"
                         TintColor="#333333"
                         TintOpacity="0.9"
                         TintLuminosityOpacity="0.6"

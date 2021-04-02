@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Frame x:Name="PageLoader"/>
+        
     </Grid>
 </Page>
