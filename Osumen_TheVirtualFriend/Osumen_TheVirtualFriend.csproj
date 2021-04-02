@@ -11,7 +11,7 @@
     <AssemblyName>Osumen_TheVirtualFriend</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -156,6 +156,7 @@
     <Compile Include="NavigationControl.xaml.cs">
       <DependentUpon>NavigationControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemindersWidgetControl.xaml.cs">
       <DependentUpon>RemindersWidgetControl.xaml</DependentUpon>
@@ -195,11 +196,16 @@
     <Content Include="Assets\pictures.svg" />
     <Content Include="Assets\play-button.png" />
     <Content Include="Assets\play-button.svg" />
+    <Content Include="Assets\Plus.png" />
+    <Content Include="Assets\Reminder.png" />
     <Content Include="Assets\reminders.png" />
     <Content Include="Assets\search.png" />
+    <Content Include="Assets\selection.png" />
     <Content Include="Assets\send %281%29.png" />
     <Content Include="Assets\send.png" />
+    <Content Include="Assets\tasks.png" />
     <Content Include="Assets\to-do-list.png" />
+    <Content Include="Assets\Watch.png" />
     <Content Include="Assets\webcam.png" />
     <Content Include="Assets\Cry.png" />
     <Content Include="Assets\exited.png" />
